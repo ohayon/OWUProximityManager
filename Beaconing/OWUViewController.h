@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "OWUProximityController.h"
+#import "OWUProximityManager.h"
 
 @interface OWUViewController : UIViewController <OWUProximityServerDelegate, OWUProximityClientDelegate>
 

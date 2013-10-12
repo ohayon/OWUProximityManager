@@ -1,5 +1,5 @@
 //
-//  OWUProximityControllerDefines.h
+//  OWUProximityManagerDefines.h
 //  Beaconing
 //
 //  Created by David Ohayon on 10/11/13.

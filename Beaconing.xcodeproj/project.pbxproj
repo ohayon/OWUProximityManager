@@ -21,9 +21,9 @@
 		18DB21C918084F4A002684A9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18DB21AB18084F4A002684A9 /* UIKit.framework */; };
 		18DB21D118084F4A002684A9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 18DB21CF18084F4A002684A9 /* InfoPlist.strings */; };
 		18DB21D318084F4A002684A9 /* BeaconingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DB21D218084F4A002684A9 /* BeaconingTests.m */; };
-		18DB21DE18084F76002684A9 /* OWUClientController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DB21DD18084F76002684A9 /* OWUClientController.m */; };
-		18DB21E218086776002684A9 /* OWUProximityController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DB21E118086776002684A9 /* OWUProximityController.m */; };
-		18DB21E518086787002684A9 /* OWUServerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DB21E418086787002684A9 /* OWUServerController.m */; };
+		18DB21DE18084F76002684A9 /* OWUClientManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DB21DD18084F76002684A9 /* OWUClientManager.m */; };
+		18DB21E218086776002684A9 /* OWUProximityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DB21E118086776002684A9 /* OWUProximityManager.m */; };
+		18DB21E518086787002684A9 /* OWUServerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DB21E418086787002684A9 /* OWUServerManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,13 +56,13 @@
 		18DB21CE18084F4A002684A9 /* BeaconingTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BeaconingTests-Info.plist"; sourceTree = "<group>"; };
 		18DB21D018084F4A002684A9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		18DB21D218084F4A002684A9 /* BeaconingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BeaconingTests.m; sourceTree = "<group>"; };
-		18DB21DC18084F76002684A9 /* OWUClientController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWUClientController.h; sourceTree = "<group>"; };
-		18DB21DD18084F76002684A9 /* OWUClientController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWUClientController.m; sourceTree = "<group>"; };
-		18DB21E018086776002684A9 /* OWUProximityController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWUProximityController.h; sourceTree = "<group>"; };
-		18DB21E118086776002684A9 /* OWUProximityController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWUProximityController.m; sourceTree = "<group>"; };
-		18DB21E318086787002684A9 /* OWUServerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWUServerController.h; sourceTree = "<group>"; };
-		18DB21E418086787002684A9 /* OWUServerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWUServerController.m; sourceTree = "<group>"; };
-		18DB21E618086889002684A9 /* OWUProximityControllerDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = OWUProximityControllerDefines.h; path = ../OWUProximityControllerDefines.h; sourceTree = "<group>"; };
+		18DB21DC18084F76002684A9 /* OWUClientManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWUClientManager.h; sourceTree = "<group>"; };
+		18DB21DD18084F76002684A9 /* OWUClientManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWUClientManager.m; sourceTree = "<group>"; };
+		18DB21E018086776002684A9 /* OWUProximityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWUProximityManager.h; sourceTree = "<group>"; };
+		18DB21E118086776002684A9 /* OWUProximityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWUProximityManager.m; sourceTree = "<group>"; };
+		18DB21E318086787002684A9 /* OWUServerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWUServerManager.h; sourceTree = "<group>"; };
+		18DB21E418086787002684A9 /* OWUServerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWUServerManager.m; sourceTree = "<group>"; };
+		18DB21E618086889002684A9 /* OWUProximityManagerDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = OWUProximityManagerDefines.h; path = ../OWUProximityManagerDefines.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,13 +166,13 @@
 		18DB21DF18084F7D002684A9 /* BeaconManager */ = {
 			isa = PBXGroup;
 			children = (
-				18DB21E018086776002684A9 /* OWUProximityController.h */,
-				18DB21E118086776002684A9 /* OWUProximityController.m */,
-				18DB21DC18084F76002684A9 /* OWUClientController.h */,
-				18DB21DD18084F76002684A9 /* OWUClientController.m */,
-				18DB21E318086787002684A9 /* OWUServerController.h */,
-				18DB21E418086787002684A9 /* OWUServerController.m */,
-				18DB21E618086889002684A9 /* OWUProximityControllerDefines.h */,
+				18DB21E018086776002684A9 /* OWUProximityManager.h */,
+				18DB21E118086776002684A9 /* OWUProximityManager.m */,
+				18DB21DC18084F76002684A9 /* OWUClientManager.h */,
+				18DB21DD18084F76002684A9 /* OWUClientManager.m */,
+				18DB21E318086787002684A9 /* OWUServerManager.h */,
+				18DB21E418086787002684A9 /* OWUServerManager.m */,
+				18DB21E618086889002684A9 /* OWUProximityManagerDefines.h */,
 			);
 			path = BeaconManager;
 			sourceTree = "<group>";
@@ -277,10 +277,10 @@
 			files = (
 				18DB21B818084F4A002684A9 /* OWUAppDelegate.m in Sources */,
 				18DB21BE18084F4A002684A9 /* OWUViewController.m in Sources */,
-				18DB21E518086787002684A9 /* OWUServerController.m in Sources */,
-				18DB21E218086776002684A9 /* OWUProximityController.m in Sources */,
+				18DB21E518086787002684A9 /* OWUServerManager.m in Sources */,
+				18DB21E218086776002684A9 /* OWUProximityManager.m in Sources */,
 				18DB21B418084F4A002684A9 /* main.m in Sources */,
-				18DB21DE18084F76002684A9 /* OWUClientController.m in Sources */,
+				18DB21DE18084F76002684A9 /* OWUClientManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

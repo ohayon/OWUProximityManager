@@ -6,41 +6,41 @@
 //  Copyright (c) 2013 ohwutup software. All rights reserved.
 //
 
-#import "OWUProximityController.h"
+#import "OWUProximityManager.h"
 
-@implementation OWUProximityController
+@implementation OWUProximityManager
 
 + (instancetype)shared {
-    static OWUProximityController *_sharedInstance = nil;
+    static OWUProximityManager *_sharedInstance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _sharedInstance = [[OWUProximityController alloc] init];
+        _sharedInstance = [[OWUProximityManager alloc] init];
     });
     
     return _sharedInstance;
 }
 
 - (void)teardownService {
-    [[OWUClientController shared] teardownClient];
-    [[OWUServerController shared] teardownServer];
+    [[OWUClientManager shared] teardownClient];
+    [[OWUServerManager shared] teardownServer];
 }
 
 #pragma mark - OWUClient
 
 - (void)startupClient {
-    [[OWUClientController shared] startupClient];
-    [OWUClientController shared].delegate = self;
+    [[OWUClientManager shared] startupClient];
+    [OWUClientManager shared].delegate = self;
 }
 
 - (void)postToServerWithDictionary:(NSDictionary*)dictionary {
-    [[OWUClientController shared] updateCharactaristicValueWithDictionary:dictionary];
+    [[OWUClientManager shared] updateCharactaristicValueWithDictionary:dictionary];
 }
 
 #pragma mark - OWUServer
 
 - (void)startupServer {
-    [[OWUServerController shared] startupServer];
-    [OWUServerController shared].delegate = self;
+    [[OWUServerManager shared] startupServer];
+    [OWUServerManager shared].delegate = self;
 }
 
 #pragma mark - OWUClientManagerDelegate

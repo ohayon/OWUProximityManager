@@ -6,10 +6,10 @@
 //  Copyright (c) 2013 ohwutup software. All rights reserved.
 //
 
-#import "OWUServerController.h"
-#import "OWUProximityControllerDefines.h"
+#import "OWUServerManager.h"
+#import "OWUProximityManagerDefines.h"
 
-@interface OWUServerController () {
+@interface OWUServerManager () {
     // iBeacons
     CBPeripheralManager *_peripheralManager;
     CLBeaconRegion *_beaconRegion;
@@ -24,13 +24,13 @@
 
 @end
 
-@implementation OWUServerController
+@implementation OWUServerManager
 
 + (instancetype) shared {
-    static OWUServerController *_sharedInstance = nil;
+    static OWUServerManager *_sharedInstance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _sharedInstance = [[OWUServerController alloc] init];
+        _sharedInstance = [[OWUServerManager alloc] init];
     });
     
     return _sharedInstance;

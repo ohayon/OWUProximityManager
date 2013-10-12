@@ -6,10 +6,10 @@
 //  Copyright (c) 2013 ohwutup software. All rights reserved.
 //
 
-#import "OWUClientController.h"
-#import "OWUProximityControllerDefines.h"
+#import "OWUClientManager.h"
+#import "OWUProximityManagerDefines.h"
 
-@interface OWUClientController () {
+@interface OWUClientManager () {
     UIBackgroundTaskIdentifier _backgroundTaskIdentifier;
     CBUUID *_serviceUUID;
     CBMutableService *_service;
@@ -24,13 +24,13 @@
 
 @end
 
-@implementation OWUClientController
+@implementation OWUClientManager
 
 + (instancetype)shared {
-    static OWUClientController *_sharedInstance = nil;
+    static OWUClientManager *_sharedInstance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _sharedInstance = [[OWUClientController alloc] init];
+        _sharedInstance = [[OWUClientManager alloc] init];
     });
     
     return _sharedInstance;
@@ -82,7 +82,7 @@
 - (void)peripheralManager:(CBPeripheralManager *)peripheral didAddService:(CBService *)service error:(NSError *)error {
     if (error == nil) {
         [_peripheralManager startAdvertising:@{
-                                               CBAdvertisementDataLocalNameKey : @"OWUClientController",
+                                               CBAdvertisementDataLocalNameKey : @"OWUClientManager",
                                                CBAdvertisementDataServiceUUIDsKey : @[_serviceUUID]
                                                }];
     }

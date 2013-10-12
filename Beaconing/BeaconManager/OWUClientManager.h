@@ -10,7 +10,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import <CoreBluetooth/CoreBluetooth.h>
 
-@protocol OWUClientControllerDelegate <NSObject>
+@protocol OWUClientManagerDelegate <NSObject>
 
 - (void)clientManagerIsPublishingToCentral;
 - (void)clientManagerDidEnterBeaconRegion;
@@ -21,7 +21,7 @@
 @end
 
 
-@interface OWUClientController : NSObject <CLLocationManagerDelegate, CBPeripheralManagerDelegate, CBPeripheralDelegate>
+@interface OWUClientManager : NSObject <CLLocationManagerDelegate, CBPeripheralManagerDelegate, CBPeripheralDelegate>
 
 @property (nonatomic, strong) id delegate;
 @property (nonatomic) CLProximity proximityToConnectToServer;

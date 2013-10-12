@@ -10,14 +10,14 @@
 #import <CoreBluetooth/CoreBluetooth.h>
 #import <CoreLocation/CoreLocation.h>
 
-@protocol OWUServerControllerDelegate <NSObject>
+@protocol OWUServerManagerDelegate <NSObject>
 
 - (void)serverManagerDidSubscribeToCharacteristic;
 - (void)serverManagerDidReceiveUpdateToCharacteristicValue:(NSDictionary*)JSONDictionary;
 
 @end
 
-@interface OWUServerController : NSObject <CBPeripheralManagerDelegate, CBCentralManagerDelegate, CBPeripheralDelegate>
+@interface OWUServerManager : NSObject <CBPeripheralManagerDelegate, CBCentralManagerDelegate, CBPeripheralDelegate>
 
 @property (nonatomic, strong) id delegate;
 + (instancetype)shared;
