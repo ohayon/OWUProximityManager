@@ -80,7 +80,6 @@
 - (void)centralManagerDidUpdateState:(CBCentralManager *)central {
     switch (central.state) {
         case CBCentralManagerStatePoweredOn:
-            // Scans for any peripheral
             [_centralManager scanForPeripheralsWithServices:@[_serviceUUID]
                                                     options:@{CBCentralManagerScanOptionAllowDuplicatesKey : @YES}];
             break;
@@ -91,13 +90,11 @@
 }
 
 - (void)centralManager:(CBCentralManager *)central didDiscoverPeripheral:(CBPeripheral *)peripheral advertisementData:(NSDictionary *)advertisementData RSSI:(NSNumber *)RSSI {
-    // Stops scanning for peripheral
     [_centralManager stopScan];
     
     if (_peripheral != peripheral) {
         _peripheral = peripheral;
         NSLog(@"Connecting to peripheral %@", peripheral);
-        // Connects to the discovered peripheral
         [_centralManager connectPeripheral:peripheral options:nil];
     }
 }

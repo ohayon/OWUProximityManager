@@ -2,6 +2,13 @@
 
 A simple interface to abstract away the `CLLocationManagerDelegate`, `CBPeripheralManagerDelegate`, `CBCentralManagerDelegate` and `CBPeripheralDelegate` spaghetti.
 
+## Sample Project
+
+A few small caveats:
+- Two iOS 7 devices are required
+- `locationManager:DidEnterRegion:` and therefor `proximityManager:DidEnterBeaconRegion` will not be called if the Client starts while already in range of the Server
+- `locationManager:DidExitRegion:` and the resulting `proximityManager:DidExitBeaconRegtion` will not be called until about a minute after exiting the region ([dev forum link](https://devforums.apple.com/message/898335#898335))
+
 ## Usage
 
 First, create three UUID's using something like `uuidgen` for `OWUProximityManagerConstants.h`

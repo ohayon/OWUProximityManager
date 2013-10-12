@@ -55,7 +55,7 @@
     [self.delegate proximityClientDidEnterRegion];
 }
 
-- (void)clientManagerDidExitRegion {
+- (void)clientManagerDidExitBeaconRegion {
     [self.delegate proximityClientDidExitRegion];
 }
 

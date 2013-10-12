@@ -14,7 +14,7 @@
 
 - (void)clientManagerIsPublishingToCentral;
 - (void)clientManagerDidEnterBeaconRegion;
-- (void)clientManagerDidExitRegion;
+- (void)clientManagerDidExitBeaconRegion;
 - (void)clientManagerDidRangeBeacon:(CLBeacon*)beacon;
 - (void)clientManagerDidDetermineRegionState:(CLRegionState)state;
 
