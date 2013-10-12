@@ -7,7 +7,7 @@ A simple interface to abstract away the `CLLocationManagerDelegate`, `CBPeripher
 A few small caveats:
 - Two iOS 7 devices are required
 - `locationManager:DidEnterRegion:` and therefor `proximityManager:DidEnterBeaconRegion` will not be called if the Client starts while already in range of the Server
-- `locationManager:DidExitRegion:` and the resulting `proximityManager:DidExitBeaconRegtion` will not be called until about a minute after exiting the region ([dev forum link](https://devforums.apple.com/message/898335#898335))
+- `locationManager:DidExitRegion:` and the resulting `proximityManager:DidExitBeaconRegion` will not be called until about a minute after exiting the region ([dev forum link](https://devforums.apple.com/message/898335#898335))
 
 ## Usage
 
