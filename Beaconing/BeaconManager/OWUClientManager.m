@@ -19,6 +19,7 @@
     CBPeripheral *_peripheral;
     CBMutableCharacteristic *_characteristic;
     NSMutableArray *_subscribedCentrals;
+    BOOL _didAddService;
 }
 
 @end
@@ -47,6 +48,14 @@
 - (void)teardownClientManager {
     _locationManager = nil;
     _beaconRegion = nil;
+    _peripheralManager = nil;
+    _peripheral = nil;
+    _serviceUUID = nil;
+    _service = nil;
+    _backgroundTaskIdentifier = 0;
+    _characteristic = nil;
+    _subscribedCentrals = nil;
+    _didAddService = NO;
 }
 
 
@@ -97,13 +106,22 @@
 
 #pragma mark - CBPeripheralManagerDelegate Helpers
 
-- (void) setupPeripheralService {
-    _peripheralManager = [[CBPeripheralManager alloc] initWithDelegate:self queue:nil];
-    CBUUID *characteristicUUID = [CBUUID UUIDWithString:kOWUBluetoothCharacteristicUUID];
-    _characteristic = [[CBMutableCharacteristic alloc] initWithType:characteristicUUID properties:CBCharacteristicPropertyNotify value:nil permissions:CBAttributePermissionsWriteable];
-    _serviceUUID = [CBUUID UUIDWithString:kOWUBluetoothServiceUUID];
-    _service = [[CBMutableService alloc] initWithType:_serviceUUID primary:YES];
-    [_service setCharacteristics:@[_characteristic]];
+
+- (void) startupPeripheralService {
+    if (!_peripheralManager) {
+        _didAddService = NO;
+        _peripheralManager = [[CBPeripheralManager alloc] initWithDelegate:self queue:nil];
+        CBUUID *characteristicUUID = [CBUUID UUIDWithString:kOWUBluetoothCharacteristicUUID];
+        _characteristic = [[CBMutableCharacteristic alloc] initWithType:characteristicUUID properties:CBCharacteristicPropertyNotify value:nil permissions:CBAttributePermissionsWriteable];
+        _serviceUUID = [CBUUID UUIDWithString:kOWUBluetoothServiceUUID];
+        _service = [[CBMutableService alloc] initWithType:_serviceUUID primary:YES];
+        [_service setCharacteristics:@[_characteristic]];
+    }
+    
+    if (!_peripheralManager.isAdvertising && !_didAddService) {
+        [_peripheralManager addService:_service];
+        _didAddService = YES;
+    }
 }
 
 #pragma mark - CLLocationManagerDelegate
@@ -122,7 +140,6 @@
                 _backgroundTaskIdentifier = UIBackgroundTaskInvalid;
             });
         } else {
-            [_locationManager startRangingBeaconsInRegion:_beaconRegion];
             [self.delegate clientManagerDidEnterBeaconRegion];
         }
     }
@@ -131,6 +148,7 @@
 - (void)locationManager:(CLLocationManager *)manager didExitRegion:(CLRegion *)region {
     if ([region isEqual:_beaconRegion]) {
         NSLog(@"Exited Region");
+        
         [self.delegate clientManagerDidExitRegion];
     }
 }
@@ -141,21 +159,24 @@
         switch (beacon.proximity) {
             case CLProximityFar:
                 if (self.proximityToConnectToServer == CLProximityFar) {
-                    [self startupPeripheralServiceForRegion:region];
+                    [_locationManager stopRangingBeaconsInRegion:region];
+                    [self startupPeripheralService];
                 }
                 [self.delegate clientManagerDidRangeBeacon:beacon];
                 NSLog(@"Far");
                 break;
             case CLProximityNear:
                 if (self.proximityToConnectToServer == CLProximityNear  || !self.proximityToConnectToServer) {
-                    [self startupPeripheralServiceForRegion:region];
+                    [_locationManager stopRangingBeaconsInRegion:region];
+                    [self startupPeripheralService];
                 }
                 [self.delegate clientManagerDidRangeBeacon:beacon];
                 NSLog(@"Near");
                 break;
             case CLProximityImmediate:
                 if (self.proximityToConnectToServer == CLProximityImmediate) {
-                    [self startupPeripheralServiceForRegion:region];
+                    [_locationManager stopRangingBeaconsInRegion:region];                    
+                    [self startupPeripheralService];
                 }
                 [self.delegate clientManagerDidRangeBeacon:beacon];
                 NSLog(@"Immediate");
@@ -170,14 +191,6 @@
     }
 }
 
-- (void) startupPeripheralServiceForRegion:(CLBeaconRegion*)region {
-    [_locationManager stopRangingBeaconsInRegion:region];
-    if (!_peripheralManager) {
-        [self setupPeripheralService];
-    }
-    [_peripheralManager addService:_service];
-}
-
 - (void)locationManager:(CLLocationManager *)manager rangingBeaconsDidFailForRegion:(CLBeaconRegion *)region withError:(NSError *)error {
     NSLog(@"Beacon ranging failed with error: %@", [error localizedDescription]);
 }
@@ -187,6 +200,7 @@
         switch (state) {
             case CLRegionStateInside:
                 [_locationManager stopMonitoringForRegion:_beaconRegion];
+                [_locationManager startRangingBeaconsInRegion:_beaconRegion];
                 [self.delegate clientManagerDidDetermineRegionState:CLRegionStateInside];
                 NSLog(@"Inside State");
                 break;

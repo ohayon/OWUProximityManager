@@ -55,6 +55,9 @@
     _centralManager = nil;
     _peripheral = nil;
     _beaconRegion = nil;
+    _data = nil;
+    _serviceUUID = nil;
+    _characteristicUUID = nil;
 }
 
 #pragma mark - CBPeripheralManagerDelegate
@@ -160,9 +163,16 @@
 
 - (void)peripheral:(CBPeripheral *)peripheral didUpdateValueForCharacteristic:(CBCharacteristic *)characteristic error:(NSError *)error {
     if (characteristic.value) {
-        NSDictionary *dataDict = [NSJSONSerialization JSONObjectWithData:characteristic.value options:NSJSONReadingAllowFragments error:nil];
+        NSDictionary *dataDict = [NSJSONSerialization JSONObjectWithData:characteristic.value
+                                                                 options:NSJSONReadingAllowFragments
+                                                                   error:nil];
         [self.delegate serverManagerDidReceiveUpdateToCharacteristicValue:dataDict];
     }
+}
+
+- (void)peripheral:(CBPeripheral *)peripheral didModifyServices:(NSArray *)invalidatedServices {
+    // TODO: Handle invalidated service
+    // continue scanning for services
 }
 
 @end

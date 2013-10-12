@@ -34,13 +34,13 @@
 
 - (void)updateServerWithDictionary:(NSDictionary*)dictionary {
     [[OWUClientManager sharedClientManager] updateCharactaristicValueWithDictionary:dictionary];
-    [OWUServerManager sharedServerManager].delegate = self;
 }
 
 #pragma mark - OWUServer
 
 - (void)startupServerAndAdvertiseBeaconRegion {
     [[OWUServerManager sharedServerManager] startupServerManager];
+    [OWUServerManager sharedServerManager].delegate = self;
 }
 
 #pragma mark - OWUClientManagerDelegate
@@ -58,7 +58,9 @@
 }
 
 - (void)clientManagerDidRangeBeacon:(CLBeacon*)beacon {
-    [self.delegate blueBeaconClientDidRangeBeacon:beacon];
+    if (beacon.proximity == CLProximityNear || beacon.proximity == self.proximityToConnectToServer) {
+        [self.delegate blueBeaconClientDidRangeBeacon:beacon];
+    }
 }
 
 - (void)clientManagerDidDetermineRegionState:(CLRegionState)state {

@@ -17,7 +17,6 @@
 - (void)blueBeaconClientDidEnterRegion;
 - (void)blueBeaconClientDidConnectToServer;
 
-@optional
 - (void)blueBeaconClientDidExitRegion;
 - (void)blueBeaconClientDidRangeBeacon:(CLBeacon*)beacon;
 

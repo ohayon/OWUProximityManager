@@ -16,6 +16,7 @@
 @property (nonatomic, strong) IBOutlet UITextField *textField;
 @property (nonatomic, strong) IBOutlet UIButton *sendButton;
 @property (nonatomic, strong) IBOutlet UIButton *killButton;
+@property (strong, nonatomic) IBOutlet UILabel *textLabel;
 
 - (IBAction)killButtonTapped:(id)sender;
 - (IBAction)sendButtonTapped:(id)sender;
@@ -33,7 +34,6 @@
     self.textField.hidden = YES;
     self.sendButton.hidden = YES;
     self.killButton.hidden = YES;
-    [OWUBlueBeaconServiceManager shared].delegate = self;
 }
 
 - (void)didReceiveMemoryWarning
@@ -45,8 +45,9 @@
 - (IBAction)serverButtonTapped:(id)sender {
     self.clientButton.hidden = YES;
     self.statusLabel.text = @"Server";
-    self.textField.hidden = NO;
+    self.killButton.hidden = NO;
     [[OWUBlueBeaconServiceManager shared] startupServerAndAdvertiseBeaconRegion];
+    [OWUBlueBeaconServiceManager shared].delegate = self;
 }
 
 - (IBAction)clientButtonTapped:(id)sender {
@@ -54,8 +55,10 @@
     self.statusLabel.text = @"Client";
     self.sendButton.hidden = NO;
     self.textField.hidden = NO;
+    self.killButton.hidden = NO;
     [[OWUBlueBeaconServiceManager shared] startupClientToMonitorForBeaconsRegions];
-    [OWUBlueBeaconServiceManager shared].proximityToConnectToServer = CLProximityFar;
+    [OWUBlueBeaconServiceManager shared].proximityToConnectToServer = CLProximityNear;
+    [OWUBlueBeaconServiceManager shared].delegate = self;
 }
 
 - (IBAction)sendButtonTapped:(id)sender {
@@ -82,12 +85,18 @@
     [alert show];
 }
 
+- (void)blueBeaconClientDidRangeBeacon:(CLBeacon *)beacon {
+//    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Ranged Beacon" message:nil delegate:self cancelButtonTitle:@"Okay" otherButtonTitles:nil, nil];
+//    [alert show];
+}
+
 #pragma mark - OWUBlueBeaconServerDelegate
 
 - (void)blueBeaconServerDidReceiveUpdatedValue:(NSDictionary*)dictionary {
     NSString *message = [NSString stringWithFormat:@"%@", dictionary];
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Connected To Server" message:message delegate:self cancelButtonTitle:@"Okay" otherButtonTitles:nil, nil];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Update From Server" message:message delegate:self cancelButtonTitle:@"Okay" otherButtonTitles:nil, nil];
     [alert show];
+    self.textLabel.text = dictionary[@"text"];
 }
 
 @end
