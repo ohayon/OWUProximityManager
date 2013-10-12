@@ -36,18 +36,11 @@
     return _sharedInstance;
 }
 
-- (instancetype)init {
-    self = [super init];
-    if (self) {
-        _serviceUUID = [CBUUID UUIDWithString:kOWUBluetoothServiceUUID];
-        _characteristicUUID = [CBUUID UUIDWithString:kOWUBluetoothCharacteristicUUID];
-    }
-    return self;
-}
-
 - (void) startupServerManager {
     _peripheralManager = [[CBPeripheralManager alloc] initWithDelegate:self queue:nil];
     _centralManager = [[CBCentralManager alloc] initWithDelegate:self queue:nil];
+    _serviceUUID = [CBUUID UUIDWithString:kOWUBluetoothServiceUUID];
+    _characteristicUUID = [CBUUID UUIDWithString:kOWUBluetoothCharacteristicUUID];
 }
 
 - (void) teardownServerManager {
