@@ -62,7 +62,7 @@
 		18DB21E118086776002684A9 /* OWUProximityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWUProximityManager.m; sourceTree = "<group>"; };
 		18DB21E318086787002684A9 /* OWUServerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWUServerManager.h; sourceTree = "<group>"; };
 		18DB21E418086787002684A9 /* OWUServerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWUServerManager.m; sourceTree = "<group>"; };
-		18DB21E618086889002684A9 /* OWUProximityManagerDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = OWUProximityManagerDefines.h; path = ../OWUProximityManagerDefines.h; sourceTree = "<group>"; };
+		18DB21E618086889002684A9 /* OWUProximityManagerDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OWUProximityManagerDefines.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +89,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18BEE13D18092CD100156B71 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				18DB21B618084F4A002684A9 /* OWUAppDelegate.h */,
+				18DB21B718084F4A002684A9 /* OWUAppDelegate.m */,
+				18DB21B918084F4A002684A9 /* Main.storyboard */,
+				18DB21BC18084F4A002684A9 /* OWUViewController.h */,
+				18DB21BD18084F4A002684A9 /* OWUViewController.m */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		18DB219B18084F4A002684A9 = {
 			isa = PBXGroup;
 			children = (
@@ -122,12 +134,9 @@
 		18DB21AD18084F4A002684A9 /* Beaconing */ = {
 			isa = PBXGroup;
 			children = (
-				18DB21DF18084F7D002684A9 /* BeaconManager */,
-				18DB21B618084F4A002684A9 /* OWUAppDelegate.h */,
-				18DB21B718084F4A002684A9 /* OWUAppDelegate.m */,
-				18DB21B918084F4A002684A9 /* Main.storyboard */,
-				18DB21BC18084F4A002684A9 /* OWUViewController.h */,
-				18DB21BD18084F4A002684A9 /* OWUViewController.m */,
+				18DB21E618086889002684A9 /* OWUProximityManagerDefines.h */,
+				18DB21DF18084F7D002684A9 /* Classes */,
+				18BEE13D18092CD100156B71 /* App */,
 				18DB21BF18084F4A002684A9 /* Images.xcassets */,
 				18DB21AE18084F4A002684A9 /* Supporting Files */,
 			);
@@ -163,7 +172,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		18DB21DF18084F7D002684A9 /* BeaconManager */ = {
+		18DB21DF18084F7D002684A9 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
 				18DB21E018086776002684A9 /* OWUProximityManager.h */,
@@ -172,9 +181,8 @@
 				18DB21DD18084F76002684A9 /* OWUClientManager.m */,
 				18DB21E318086787002684A9 /* OWUServerManager.h */,
 				18DB21E418086787002684A9 /* OWUServerManager.m */,
-				18DB21E618086889002684A9 /* OWUProximityManagerDefines.h */,
 			);
-			path = BeaconManager;
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,6 +325,7 @@
 				18DB21BA18084F4A002684A9 /* Base */,
 			);
 			name = Main.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		18DB21CF18084F4A002684A9 /* InfoPlist.strings */ = {
