@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   s.author       = { "David Ohayon" => "ohayon.1@gmail.com" }
   s.platform     = :ios, '7.0'
   s.source       = { :git => "https://github.com/ohwutup/OWUProximityManager.git", :tag => "0.0.1" }
-  s.source_files = 'Classes/*.{h,m}', 'OWUProximityManagerDefines.h'
+  s.source_files = 'Classes/*.{h,m}', 'Constants/OWUProximityManagerConstants.h'
   s.frameworks   = 'CoreBluetooth', 'CoreLocation'
   s.requires_arc = 'true'
 end

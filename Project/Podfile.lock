@@ -1,5 +1,5 @@
 PODS:
-  - OWUProximityManager (1.0.0)
+  - OWUProximityManager (0.0.1)
 
 DEPENDENCIES:
   - OWUProximityManager (from `../OWUProximityManager.podspec`)
@@ -9,6 +9,6 @@ EXTERNAL SOURCES:
     :podspec: ../OWUProximityManager.podspec
 
 SPEC CHECKSUMS:
-  OWUProximityManager: f45205644714f245798c72fe135bee4671efda97
+  OWUProximityManager: 77d546e21260103fc995735b983fc550910ddc5d
 
 COCOAPODS: 0.25.0
