@@ -81,7 +81,8 @@
     switch (central.state) {
         case CBCentralManagerStatePoweredOn:
             // Scans for any peripheral
-            [_centralManager scanForPeripheralsWithServices:@[_serviceUUID] options:@{CBCentralManagerScanOptionAllowDuplicatesKey : @YES}];
+            [_centralManager scanForPeripheralsWithServices:@[_serviceUUID]
+                                                    options:@{CBCentralManagerScanOptionAllowDuplicatesKey : @YES}];
             break;
             
         default:
@@ -148,6 +149,7 @@
     if (characteristic.isNotifying) {
         NSLog(@"Notifications started for characteristic: %@", characteristic);
         [peripheral readValueForCharacteristic:characteristic];
+        [self.delegate serverManagerDidSubscribeToCharacteristic];
     } else {
         NSLog(@"Notification stopped for characteristic: %@", characteristic);
         [_centralManager cancelPeripheralConnection:_peripheral];

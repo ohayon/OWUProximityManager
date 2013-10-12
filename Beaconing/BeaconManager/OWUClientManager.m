@@ -60,8 +60,11 @@
 
 
 - (void) updateCharactaristicValueWithDictionary:(NSDictionary*)JSONDictionary {
-    NSData *data = [NSJSONSerialization dataWithJSONObject:JSONDictionary options:NSJSONWritingPrettyPrinted error:nil];
-    [_peripheralManager updateValue:data forCharacteristic:_characteristic onSubscribedCentrals:_subscribedCentrals];
+    NSData *data = [NSJSONSerialization dataWithJSONObject:JSONDictionary
+                                                   options:NSJSONWritingPrettyPrinted error:nil];
+    [_peripheralManager updateValue:data
+                  forCharacteristic:_characteristic
+               onSubscribedCentrals:_subscribedCentrals];
 }
 
 #pragma mark - CBPeripheralManagerDelegate
@@ -78,11 +81,10 @@
 
 - (void)peripheralManager:(CBPeripheralManager *)peripheral didAddService:(CBService *)service error:(NSError *)error {
     if (error == nil) {
-        // Starts advertising the service
         [_peripheralManager startAdvertising:@{
-                                                   CBAdvertisementDataLocalNameKey : @"OWU",
-                                                   CBAdvertisementDataServiceUUIDsKey : @[_serviceUUID]
-                                                   }];
+                                               CBAdvertisementDataLocalNameKey : @"OWUClientManager",
+                                               CBAdvertisementDataServiceUUIDsKey : @[_serviceUUID]
+                                               }];
     }
 }
 
@@ -112,7 +114,10 @@
         _didAddService = NO;
         _peripheralManager = [[CBPeripheralManager alloc] initWithDelegate:self queue:nil];
         CBUUID *characteristicUUID = [CBUUID UUIDWithString:kOWUBluetoothCharacteristicUUID];
-        _characteristic = [[CBMutableCharacteristic alloc] initWithType:characteristicUUID properties:CBCharacteristicPropertyNotify value:nil permissions:CBAttributePermissionsWriteable];
+        _characteristic = [[CBMutableCharacteristic alloc] initWithType:characteristicUUID
+                                                             properties:CBCharacteristicPropertyNotify
+                                                                  value:nil
+                                                            permissions:CBAttributePermissionsWriteable];
         _serviceUUID = [CBUUID UUIDWithString:kOWUBluetoothServiceUUID];
         _service = [[CBMutableService alloc] initWithType:_serviceUUID primary:YES];
         [_service setCharacteristics:@[_characteristic]];
@@ -128,17 +133,9 @@
 
 - (void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region {
     if ([region isEqual:_beaconRegion]) {
-        NSLog(@"entered");
+        NSLog(@"Entered Region");
         if ([UIApplication sharedApplication].applicationState == UIApplicationStateBackground) {
-            _backgroundTaskIdentifier = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:^{
-                [[UIApplication sharedApplication] endBackgroundTask:_backgroundTaskIdentifier];
-                _backgroundTaskIdentifier = UIBackgroundTaskInvalid;
-            }];
-            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-                [self showNotification];
-                [[UIApplication sharedApplication] endBackgroundTask:_backgroundTaskIdentifier];
-                _backgroundTaskIdentifier = UIBackgroundTaskInvalid;
-            });
+            [self showNotification];
         } else {
             [self.delegate clientManagerDidEnterBeaconRegion];
         }
@@ -148,7 +145,6 @@
 - (void)locationManager:(CLLocationManager *)manager didExitRegion:(CLRegion *)region {
     if ([region isEqual:_beaconRegion]) {
         NSLog(@"Exited Region");
-        
         [self.delegate clientManagerDidExitRegion];
     }
 }
@@ -226,10 +222,18 @@
 #pragma mark - Local Notification
 
 - (void) showNotification {
-    UILocalNotification *notification = [[UILocalNotification alloc] init];
-    notification.alertAction = @"Did Enter Region";
-    notification.fireDate = [NSDate date];
-    [[UIApplication sharedApplication] scheduleLocalNotification:notification];
+    _backgroundTaskIdentifier = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:^{
+        [[UIApplication sharedApplication] endBackgroundTask:_backgroundTaskIdentifier];
+        _backgroundTaskIdentifier = UIBackgroundTaskInvalid;
+    }];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [[UIApplication sharedApplication] cancelAllLocalNotifications];
+        UILocalNotification *notification = [[UILocalNotification alloc] init];
+        notification.alertBody = @"Entered Region";
+        [[UIApplication sharedApplication] presentLocalNotificationNow:notification];
+        [[UIApplication sharedApplication] endBackgroundTask:_backgroundTaskIdentifier];
+        _backgroundTaskIdentifier = UIBackgroundTaskInvalid;
+    });
 }
 
 @end

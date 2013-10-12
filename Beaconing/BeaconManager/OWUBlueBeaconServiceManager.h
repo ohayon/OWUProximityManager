@@ -12,19 +12,19 @@
 #import <CoreBluetooth/CoreBluetooth.h>
 #import <CoreLocation/CoreLocation.h>
 
-@protocol OWUBlueBeaconClientDelegate <NSObject>
+@protocol OWUProximityControllerClientDelegate <NSObject>
 
-- (void)blueBeaconClientDidEnterRegion;
-- (void)blueBeaconClientDidConnectToServer;
-
-- (void)blueBeaconClientDidExitRegion;
-- (void)blueBeaconClientDidRangeBeacon:(CLBeacon*)beacon;
+- (void)proximityClientDidEnterRegion;
+- (void)proximityClientDidConnectToServer;
+- (void)proximityClientDidExitRegion;
+- (void)proximityClientDidRangeBeacon:(CLBeacon*)beacon;
 
 @end
 
 @protocol OWUBlueBeaconServerDelegate <NSObject>
 
-- (void)blueBeaconServerDidReceiveUpdatedValue:(NSDictionary*)dictionary;
+- (void)proximityServerDidConnectToClient;
+- (void)proximityServerDidReceiveNewDictionary:(NSDictionary*)dictionary;
 
 @end
 
@@ -34,11 +34,11 @@
 @property (nonatomic) id delegate;
 
 // Server
-- (void)startupServerAndAdvertiseBeaconRegion;
+- (void)startupServer;
 
 // Client
-- (void)startupClientToMonitorForBeaconsRegions;
-- (void)updateServerWithDictionary:(NSDictionary*)dictionary;
+- (void)startupClient;
+- (void)postToServerWithDictionary:(NSDictionary*)dictionary;
 
 // By default, the client will pair with the server when it is CLProximityNear
 @property (nonatomic) CLProximity proximityToConnectToServer;

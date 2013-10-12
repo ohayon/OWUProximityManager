@@ -12,6 +12,7 @@
 
 @protocol OWUServerManagerDelegate <NSObject>
 
+- (void)serverManagerDidSubscribeToCharacteristic;
 - (void)serverManagerDidReceiveUpdateToCharacteristicValue:(NSDictionary*)JSONDictionary;
 
 @end

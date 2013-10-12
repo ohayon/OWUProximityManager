@@ -166,13 +166,13 @@
 		18DB21DF18084F7D002684A9 /* BeaconManager */ = {
 			isa = PBXGroup;
 			children = (
-				18DB21E618086889002684A9 /* OWUBBSeriviceManagerDefines.h */,
-				18DB21DC18084F76002684A9 /* OWUClientManager.h */,
-				18DB21DD18084F76002684A9 /* OWUClientManager.m */,
 				18DB21E018086776002684A9 /* OWUBlueBeaconServiceManager.h */,
 				18DB21E118086776002684A9 /* OWUBlueBeaconServiceManager.m */,
+				18DB21DC18084F76002684A9 /* OWUClientManager.h */,
+				18DB21DD18084F76002684A9 /* OWUClientManager.m */,
 				18DB21E318086787002684A9 /* OWUServerManager.h */,
 				18DB21E418086787002684A9 /* OWUServerManager.m */,
+				18DB21E618086889002684A9 /* OWUBBSeriviceManagerDefines.h */,
 			);
 			path = BeaconManager;
 			sourceTree = "<group>";
@@ -489,6 +489,7 @@
 				18DB21D818084F4A002684A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		18DB21D918084F4A002684A9 /* Build configuration list for PBXNativeTarget "BeaconingTests" */ = {
 			isa = XCConfigurationList;
@@ -497,6 +498,7 @@
 				18DB21DB18084F4A002684A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

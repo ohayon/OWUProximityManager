@@ -27,18 +27,18 @@
 
 #pragma mark - OWUClient
 
-- (void)startupClientToMonitorForBeaconsRegions {
+- (void)startupClient {
     [[OWUClientManager sharedClientManager] startupClientManager];
     [OWUClientManager sharedClientManager].delegate = self;
 }
 
-- (void)updateServerWithDictionary:(NSDictionary*)dictionary {
+- (void)postToServerWithDictionary:(NSDictionary*)dictionary {
     [[OWUClientManager sharedClientManager] updateCharactaristicValueWithDictionary:dictionary];
 }
 
 #pragma mark - OWUServer
 
-- (void)startupServerAndAdvertiseBeaconRegion {
+- (void)startupServer {
     [[OWUServerManager sharedServerManager] startupServerManager];
     [OWUServerManager sharedServerManager].delegate = self;
 }
@@ -46,20 +46,20 @@
 #pragma mark - OWUClientManagerDelegate
 
 - (void)clientManagerIsPublishingToCentral {
-    [self.delegate blueBeaconClientDidConnectToServer];
+    [self.delegate proximityClientDidConnectToServer];
 }
 
 - (void)clientManagerDidEnterBeaconRegion {
-    [self.delegate blueBeaconClientDidEnterRegion];
+    [self.delegate proximityClientDidEnterRegion];
 }
 
 - (void)clientManagerDidExitRegion {
-    [self.delegate blueBeaconClientDidExitRegion];
+    [self.delegate proximityClientDidExitRegion];
 }
 
 - (void)clientManagerDidRangeBeacon:(CLBeacon*)beacon {
     if (beacon.proximity == CLProximityNear || beacon.proximity == self.proximityToConnectToServer) {
-        [self.delegate blueBeaconClientDidRangeBeacon:beacon];
+        [self.delegate proximityClientDidRangeBeacon:beacon];
     }
 }
 
@@ -69,8 +69,12 @@
 
 #pragma mark - OWUServerManagerDelegate
 
+- (void)serverManagerDidSubscribeToCharacteristic {
+    [self.delegate proximityServerDidConnectToClient];
+}
+
 - (void)serverManagerDidReceiveUpdateToCharacteristicValue:(NSDictionary*)JSONDictionary {
-    [self.delegate blueBeaconServerDidReceiveUpdatedValue:JSONDictionary];
+    [self.delegate proximityServerDidReceiveNewDictionary:JSONDictionary];
 }
 
 @end

@@ -10,18 +10,18 @@
 
 @interface OWUViewController ()
 
-@property (nonatomic, strong) IBOutlet UIButton *serverButton;
-@property (nonatomic, strong) IBOutlet UIButton *clientButton;
-@property (strong, nonatomic) IBOutlet UILabel *statusLabel;
 @property (nonatomic, strong) IBOutlet UITextField *textField;
-@property (nonatomic, strong) IBOutlet UIButton *sendButton;
-@property (nonatomic, strong) IBOutlet UIButton *killButton;
-@property (strong, nonatomic) IBOutlet UILabel *textLabel;
+@property (nonatomic, strong) IBOutlet UIButton *updateButton;
+@property (strong, nonatomic) IBOutlet UISwitch *clientSwitch;
+@property (strong, nonatomic) IBOutlet UISwitch *serverSwitch;
+@property (strong, nonatomic) IBOutlet UILabel *currentLabel;
+@property (strong, nonatomic) IBOutlet UILabel *currentValueLabel;
+@property (nonatomic, strong) IBOutlet UILabel *clientLabel;
+@property (nonatomic, strong) IBOutlet UILabel *serverLabel;
 
-- (IBAction)killButtonTapped:(id)sender;
-- (IBAction)sendButtonTapped:(id)sender;
-- (IBAction)serverButtonTapped:(id)sender;
-- (IBAction)clientButtonTapped:(id)sender;
+- (IBAction)updateButtonTapped:(id)sender;
+- (IBAction)clientSwitchSwitched:(id)sender;
+- (IBAction)serverSwitchSwitched:(id)sender;
 
 @end
 
@@ -31,9 +31,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    self.textField.hidden = YES;
-    self.sendButton.hidden = YES;
-    self.killButton.hidden = YES;
+    self.clientSwitch.on = NO;
+    self.serverSwitch.on = NO;
 }
 
 - (void)didReceiveMemoryWarning
@@ -42,71 +41,118 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)serverButtonTapped:(id)sender {
-    self.clientButton.hidden = YES;
-    self.statusLabel.text = @"Server";
-    self.killButton.hidden = NO;
-    [[OWUBlueBeaconServiceManager shared] startupServerAndAdvertiseBeaconRegion];
-    [OWUBlueBeaconServiceManager shared].delegate = self;
-}
-
-- (IBAction)clientButtonTapped:(id)sender {
-    self.serverButton.hidden = YES;
-    self.statusLabel.text = @"Client";
-    self.sendButton.hidden = NO;
+- (void)setupUIForClient {
     self.textField.hidden = NO;
-    self.killButton.hidden = NO;
-    [[OWUBlueBeaconServiceManager shared] startupClientToMonitorForBeaconsRegions];
-    [OWUBlueBeaconServiceManager shared].proximityToConnectToServer = CLProximityNear;
-    [OWUBlueBeaconServiceManager shared].delegate = self;
+    self.updateButton.hidden = NO;
+    self.serverSwitch.hidden = YES;
+    self.serverLabel.hidden = YES;
 }
 
-- (IBAction)sendButtonTapped:(id)sender {
-    [[OWUBlueBeaconServiceManager shared] updateServerWithDictionary:@{@"text": self.textField.text}];
+- (void)setupUIForServer {
+    self.currentLabel.hidden = NO;
+    self.currentValueLabel.hidden = NO;
+    self.clientSwitch.hidden = YES;
+    self.clientLabel.hidden = YES;
 }
 
-- (IBAction)killButtonTapped:(id)sender {
+- (IBAction)clientSwitchSwitched:(id)sender {
+    UISwitch *theSwitch = (UISwitch*)sender;
+    if (theSwitch.isOn) {
+        [[OWUBlueBeaconServiceManager shared] startupClient];
+        [OWUBlueBeaconServiceManager shared].proximityToConnectToServer = CLProximityNear;
+        [OWUBlueBeaconServiceManager shared].delegate = self;
+        [self setupUIForClient];
+    } else {
+        [self killService];
+    }
+}
+
+- (IBAction)serverSwitchSwitched:(id)sender {
+    UISwitch *theSwitch = (UISwitch*)sender;
+    if (theSwitch.isOn) {
+        [[OWUBlueBeaconServiceManager shared] startupServer];
+        [OWUBlueBeaconServiceManager shared].delegate = self;
+        [self setupUIForServer];
+    } else {
+        [self killService];
+    }
+}
+
+- (void)killService {
     [[OWUBlueBeaconServiceManager shared] teardownService];
     self.textField.hidden = YES;
-    self.sendButton.hidden = YES;
-    self.textField.hidden = YES;
-    self.killButton.hidden = YES;
+    self.updateButton.hidden = YES;
+    self.currentValueLabel.hidden = YES;
+    self.currentLabel.hidden = YES;
+    self.serverSwitch.hidden = NO;
+    self.clientSwitch.hidden = NO;
+    self.serverLabel.hidden = NO;
+    self.clientLabel.hidden = NO;
+    [self.textField resignFirstResponder];
+    self.textField.text = @"";
+    self.currentValueLabel.text = @"";
+}
+
+- (IBAction)updateButtonTapped:(id)sender {
+    [[OWUBlueBeaconServiceManager shared] postToServerWithDictionary:@{@"key": self.textField.text}];
+    [self.textField resignFirstResponder];
 }
 
 #pragma mark - OWUBlueBeaconClientDelegate
 
-- (void)blueBeaconClientDidEnterRegion {
+- (void)proximityClientDidEnterRegion {
     // This will not be called if the app is started while already inside of the region
-    
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Entered Region" message:nil delegate:self cancelButtonTitle:@"Okay" otherButtonTitles:nil, nil];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Entered Region"
+                                                    message:nil
+                                                   delegate:self
+                                          cancelButtonTitle:@"Okay"
+                                          otherButtonTitles:nil, nil];
     [alert show];
 }
 
-- (void)blueBeaconClientDidConnectToServer {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Connected To Server" message:nil delegate:self cancelButtonTitle:@"Okay" otherButtonTitles:nil, nil];
+- (void)proximityClientDidConnectToServer {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Connected To Server"
+                                                    message:nil
+                                                   delegate:self
+                                          cancelButtonTitle:@"Okay"
+                                          otherButtonTitles:nil, nil];
     [alert show];
 }
 
-- (void)blueBeaconClientDidRangeBeacon:(CLBeacon *)beacon {
-//    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Ranged Beacon" message:nil delegate:self cancelButtonTitle:@"Okay" otherButtonTitles:nil, nil];
-//    [alert show];
+- (void)proximityClientDidRangeBeacon:(CLBeacon *)beacon {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Ranged Beacon"
+                                                    message:nil
+                                                   delegate:self
+                                          cancelButtonTitle:@"Okay"
+                                          otherButtonTitles:nil, nil];
+    [alert show];
 }
 
-- (void)blueBeaconClientDidExitRegion {
+- (void)proximityClientDidExitRegion {
     // This will not get called until about a minute after exiting the region
     // https://devforums.apple.com/message/898335#898335
     
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Exited Region" message:nil delegate:self cancelButtonTitle:@"Okay" otherButtonTitles:nil, nil];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Exited Region"
+                                                    message:nil
+                                                   delegate:self
+                                          cancelButtonTitle:@"Okay"
+                                          otherButtonTitles:nil, nil];
     [alert show];
 }
 
 #pragma mark - OWUBlueBeaconServerDelegate
 
-- (void)blueBeaconServerDidReceiveUpdatedValue:(NSDictionary*)dictionary {
-    NSString *message = [NSString stringWithFormat:@"%@", dictionary];
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Update From Server" message:message delegate:self cancelButtonTitle:@"Okay" otherButtonTitles:nil, nil];
+- (void)proximityServerDidConnectToClient {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Connected To Client"
+                                                    message:nil
+                                                   delegate:self
+                                          cancelButtonTitle:@"Okay"
+                                          otherButtonTitles:nil, nil];
     [alert show];
-    self.textLabel.text = dictionary[@"text"];
+}
+
+- (void)proximityServerDidReceiveNewDictionary:(NSDictionary*)dictionary {
+    self.currentValueLabel.text = dictionary[@"key"];
 }
 
 @end
