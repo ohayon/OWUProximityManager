@@ -27,7 +27,8 @@
 
 #pragma mark - OWUClient
 
-- (void)startupClient {
+- (void)startupClientWithDelegate:(id)delegate {
+    self.delegate = delegate;
     [[OWUClientManager shared] startupClient];
     [OWUClientManager shared].delegate = self;
 }
@@ -38,7 +39,8 @@
 
 #pragma mark - OWUServer
 
-- (void)startupServer {
+- (void)startupServerWithDelegate:(id)delegate {
+    self.delegate = delegate;
     [[OWUServerManager shared] startupServer];
     [OWUServerManager shared].delegate = self;
 }
@@ -58,7 +60,7 @@
 }
 
 - (void)clientManagerDidRangeBeacon:(CLBeacon*)beacon {
-    if (beacon.proximity == CLProximityNear || beacon.proximity == self.proximityToConnectToServer) {
+    if (beacon.proximity == CLProximityNear || beacon.proximity == self.desiredProximity) {
         [self.delegate proximityClientDidRangeBeacon:beacon];
     }
 }

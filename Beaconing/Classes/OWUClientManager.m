@@ -154,7 +154,7 @@
         CLBeacon *beacon = beacons[0];
         switch (beacon.proximity) {
             case CLProximityFar:
-                if (self.proximityToConnectToServer == CLProximityFar) {
+                if (self.desiredProximity == CLProximityFar) {
                     [_locationManager stopRangingBeaconsInRegion:region];
                     [self startupPeripheralService];
                 }
@@ -162,7 +162,7 @@
                 NSLog(@"Far");
                 break;
             case CLProximityNear:
-                if (self.proximityToConnectToServer == CLProximityNear  || !self.proximityToConnectToServer) {
+                if (self.desiredProximity == CLProximityNear  || !self.desiredProximity) {
                     [_locationManager stopRangingBeaconsInRegion:region];
                     [self startupPeripheralService];
                 }
@@ -170,7 +170,7 @@
                 NSLog(@"Near");
                 break;
             case CLProximityImmediate:
-                if (self.proximityToConnectToServer == CLProximityImmediate) {
+                if (self.desiredProximity == CLProximityImmediate) {
                     [_locationManager stopRangingBeaconsInRegion:region];                    
                     [self startupPeripheralService];
                 }

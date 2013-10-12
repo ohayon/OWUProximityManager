@@ -34,14 +34,14 @@
 @property (nonatomic) id delegate;
 
 // Server
-- (void)startupServer;
+- (void)startupServerWithDelegate:(id)delegate;
 
 // Client
-- (void)startupClient;
+- (void)startupClientWithDelegate:(id)delegate;
 - (void)postToServerWithDictionary:(NSDictionary*)dictionary;
 
 // By default, the client will pair with the server when it is CLProximityNear
-@property (nonatomic) CLProximity proximityToConnectToServer;
+@property (nonatomic) CLProximity desiredProximity;
 
 - (void)teardownService;
 

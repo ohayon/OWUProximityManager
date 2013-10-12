@@ -24,7 +24,7 @@
 @interface OWUClientManager : NSObject <CLLocationManagerDelegate, CBPeripheralManagerDelegate, CBPeripheralDelegate>
 
 @property (nonatomic, strong) id delegate;
-@property (nonatomic) CLProximity proximityToConnectToServer;
+@property (nonatomic) CLProximity desiredProximity;
 
 + (instancetype)shared;
 - (void)startupClient;

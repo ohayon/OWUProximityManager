@@ -58,9 +58,8 @@
 - (IBAction)clientSwitchSwitched:(id)sender {
     UISwitch *theSwitch = (UISwitch*)sender;
     if (theSwitch.isOn) {
-        [[OWUProximityManager shared] startupClient];
-        [OWUProximityManager shared].proximityToConnectToServer = CLProximityNear;
-        [OWUProximityManager shared].delegate = self;
+        [[OWUProximityManager shared] startupClientWithDelegate:self];
+        [OWUProximityManager shared].desiredProximity = CLProximityNear;
         [self setupUIForClient];
     } else {
         [self killService];
@@ -70,8 +69,7 @@
 - (IBAction)serverSwitchSwitched:(id)sender {
     UISwitch *theSwitch = (UISwitch*)sender;
     if (theSwitch.isOn) {
-        [[OWUProximityManager shared] startupServer];
-        [OWUProximityManager shared].delegate = self;
+        [[OWUProximityManager shared] startupServerWithDelegate:self];
         [self setupUIForServer];
     } else {
         [self killService];
