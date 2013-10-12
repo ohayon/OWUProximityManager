@@ -7,7 +7,7 @@
 //
 
 #import "OWUClientManager.h"
-#import "OWUProximityManagerDefines.h"
+#import "OWUProximityManagerConstants.h"
 
 @interface OWUClientManager () {
     UIBackgroundTaskIdentifier _backgroundTaskIdentifier;

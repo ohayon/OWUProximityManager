@@ -7,7 +7,7 @@
 //
 
 #import "OWUServerManager.h"
-#import "OWUProximityManagerDefines.h"
+#import "OWUProximityManagerConstants.h"
 
 @interface OWUServerManager () {
     // iBeacons

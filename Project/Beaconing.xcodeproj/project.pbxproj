@@ -1,1111 +1,568 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>18BEE13D18092CD100156B71</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>18DB21B618084F4A002684A9</string>
-				<string>18DB21B718084F4A002684A9</string>
-				<string>18DB21B918084F4A002684A9</string>
-				<string>18DB21BC18084F4A002684A9</string>
-				<string>18DB21BD18084F4A002684A9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>App</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>18DB219B18084F4A002684A9</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>18DB21AD18084F4A002684A9</string>
-				<string>18DB21CC18084F4A002684A9</string>
-				<string>18DB21A618084F4A002684A9</string>
-				<string>18DB21A518084F4A002684A9</string>
-				<string>FFA99BD2174B4A78A96DD7A5</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>18DB219C18084F4A002684A9</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>CLASSPREFIX</key>
-				<string>OWU</string>
-				<key>LastUpgradeCheck</key>
-				<string>0500</string>
-				<key>ORGANIZATIONNAME</key>
-				<string>ohwutup software</string>
-				<key>TargetAttributes</key>
-				<dict>
-					<key>18DB21C418084F4A002684A9</key>
-					<dict>
-						<key>TestTargetID</key>
-						<string>18DB21A318084F4A002684A9</string>
-					</dict>
-				</dict>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>18DB219F18084F4A002684A9</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-				<string>Base</string>
-			</array>
-			<key>mainGroup</key>
-			<string>18DB219B18084F4A002684A9</string>
-			<key>productRefGroup</key>
-			<string>18DB21A518084F4A002684A9</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>18DB21A318084F4A002684A9</string>
-				<string>18DB21C418084F4A002684A9</string>
-			</array>
-		</dict>
-		<key>18DB219F18084F4A002684A9</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>18DB21D418084F4A002684A9</string>
-				<string>18DB21D518084F4A002684A9</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>18DB21A018084F4A002684A9</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>18DB21B818084F4A002684A9</string>
-				<string>18DB21BE18084F4A002684A9</string>
-				<string>18DB21B418084F4A002684A9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>18DB21A118084F4A002684A9</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>18DB21AA18084F4A002684A9</string>
-				<string>18DB21AC18084F4A002684A9</string>
-				<string>18DB21A818084F4A002684A9</string>
-				<string>2E6A10EF686A4D21B80D5418</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>18DB21A218084F4A002684A9</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>18DB21C018084F4A002684A9</string>
-				<string>18DB21B218084F4A002684A9</string>
-				<string>18DB21BB18084F4A002684A9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>18DB21A318084F4A002684A9</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>18DB21D618084F4A002684A9</string>
-			<key>buildPhases</key>
-			<array>
-				<string>ADD57107338A425DA00F7C28</string>
-				<string>18DB21A018084F4A002684A9</string>
-				<string>18DB21A118084F4A002684A9</string>
-				<string>18DB21A218084F4A002684A9</string>
-				<string>5444785431314F02944EE37D</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Beaconing</string>
-			<key>productName</key>
-			<string>Beaconing</string>
-			<key>productReference</key>
-			<string>18DB21A418084F4A002684A9</string>
-			<key>productType</key>
-			<string>com.apple.product-type.application</string>
-		</dict>
-		<key>18DB21A418084F4A002684A9</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.application</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Beaconing.app</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>18DB21A518084F4A002684A9</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>18DB21A418084F4A002684A9</string>
-				<string>18DB21C518084F4A002684A9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>18DB21A618084F4A002684A9</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>18DB21A718084F4A002684A9</string>
-				<string>18DB21A918084F4A002684A9</string>
-				<string>18DB21AB18084F4A002684A9</string>
-				<string>18DB21C618084F4A002684A9</string>
-				<string>F2EE1A25F13D497A9D9D65BC</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>18DB21A718084F4A002684A9</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>Foundation.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/Foundation.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>18DB21A818084F4A002684A9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>18DB21A718084F4A002684A9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>18DB21A918084F4A002684A9</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>CoreGraphics.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/CoreGraphics.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>18DB21AA18084F4A002684A9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>18DB21A918084F4A002684A9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>18DB21AB18084F4A002684A9</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>UIKit.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/UIKit.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>18DB21AC18084F4A002684A9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>18DB21AB18084F4A002684A9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>18DB21AD18084F4A002684A9</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>18BEE13D18092CD100156B71</string>
-				<string>18DB21BF18084F4A002684A9</string>
-				<string>18DB21AE18084F4A002684A9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>Beaconing</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>18DB21AE18084F4A002684A9</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>18DB21AF18084F4A002684A9</string>
-				<string>18DB21B018084F4A002684A9</string>
-				<string>18DB21B318084F4A002684A9</string>
-				<string>18DB21B518084F4A002684A9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Supporting Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>18DB21AF18084F4A002684A9</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Beaconing-Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>18DB21B018084F4A002684A9</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>18DB21B118084F4A002684A9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>InfoPlist.strings</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>18DB21B118084F4A002684A9</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.strings</string>
-			<key>name</key>
-			<string>en</string>
-			<key>path</key>
-			<string>en.lproj/InfoPlist.strings</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>18DB21B218084F4A002684A9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>18DB21B018084F4A002684A9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>18DB21B318084F4A002684A9</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>main.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>18DB21B418084F4A002684A9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>18DB21B318084F4A002684A9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>18DB21B518084F4A002684A9</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Beaconing-Prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>18DB21B618084F4A002684A9</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>OWUAppDelegate.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>18DB21B718084F4A002684A9</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>OWUAppDelegate.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>18DB21B818084F4A002684A9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>18DB21B718084F4A002684A9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>18DB21B918084F4A002684A9</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>18DB21BA18084F4A002684A9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>Main.storyboard</string>
-			<key>path</key>
-			<string>..</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>18DB21BA18084F4A002684A9</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/Main.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>18DB21BB18084F4A002684A9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>18DB21B918084F4A002684A9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>18DB21BC18084F4A002684A9</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>OWUViewController.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>18DB21BD18084F4A002684A9</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>lineEnding</key>
-			<string>0</string>
-			<key>path</key>
-			<string>OWUViewController.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-			<key>xcLanguageSpecificationIdentifier</key>
-			<string>xcode.lang.objc</string>
-		</dict>
-		<key>18DB21BE18084F4A002684A9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>18DB21BD18084F4A002684A9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>18DB21BF18084F4A002684A9</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>folder.assetcatalog</string>
-			<key>path</key>
-			<string>Images.xcassets</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>18DB21C018084F4A002684A9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>18DB21BF18084F4A002684A9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>18DB21C118084F4A002684A9</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>18DB21D318084F4A002684A9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>18DB21C218084F4A002684A9</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>18DB21C718084F4A002684A9</string>
-				<string>18DB21C918084F4A002684A9</string>
-				<string>18DB21C818084F4A002684A9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>18DB21C318084F4A002684A9</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>18DB21D118084F4A002684A9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>18DB21C418084F4A002684A9</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>18DB21D918084F4A002684A9</string>
-			<key>buildPhases</key>
-			<array>
-				<string>18DB21C118084F4A002684A9</string>
-				<string>18DB21C218084F4A002684A9</string>
-				<string>18DB21C318084F4A002684A9</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>18DB21CB18084F4A002684A9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>BeaconingTests</string>
-			<key>productName</key>
-			<string>BeaconingTests</string>
-			<key>productReference</key>
-			<string>18DB21C518084F4A002684A9</string>
-			<key>productType</key>
-			<string>com.apple.product-type.bundle.unit-test</string>
-		</dict>
-		<key>18DB21C518084F4A002684A9</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.cfbundle</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>BeaconingTests.xctest</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>18DB21C618084F4A002684A9</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>XCTest.framework</string>
-			<key>path</key>
-			<string>Library/Frameworks/XCTest.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>18DB21C718084F4A002684A9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>18DB21C618084F4A002684A9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>18DB21C818084F4A002684A9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>18DB21A718084F4A002684A9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>18DB21C918084F4A002684A9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>18DB21AB18084F4A002684A9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>18DB21CA18084F4A002684A9</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>18DB219C18084F4A002684A9</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>18DB21A318084F4A002684A9</string>
-			<key>remoteInfo</key>
-			<string>Beaconing</string>
-		</dict>
-		<key>18DB21CB18084F4A002684A9</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>18DB21A318084F4A002684A9</string>
-			<key>targetProxy</key>
-			<string>18DB21CA18084F4A002684A9</string>
-		</dict>
-		<key>18DB21CC18084F4A002684A9</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>18DB21D218084F4A002684A9</string>
-				<string>18DB21CD18084F4A002684A9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>BeaconingTests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>18DB21CD18084F4A002684A9</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>18DB21CE18084F4A002684A9</string>
-				<string>18DB21CF18084F4A002684A9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Supporting Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>18DB21CE18084F4A002684A9</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>BeaconingTests-Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>18DB21CF18084F4A002684A9</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>18DB21D018084F4A002684A9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>InfoPlist.strings</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>18DB21D018084F4A002684A9</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.strings</string>
-			<key>name</key>
-			<string>en</string>
-			<key>path</key>
-			<string>en.lproj/InfoPlist.strings</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>18DB21D118084F4A002684A9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>18DB21CF18084F4A002684A9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>18DB21D218084F4A002684A9</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>BeaconingTests.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>18DB21D318084F4A002684A9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>18DB21D218084F4A002684A9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>18DB21D418084F4A002684A9</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>ARCHS</key>
-				<string>$(ARCHS_STANDARD_INCLUDING_64_BIT)</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.0</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>18DB21D518084F4A002684A9</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>ARCHS</key>
-				<string>$(ARCHS_STANDARD_INCLUDING_64_BIT)</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.0</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>18DB21D618084F4A002684A9</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>18DB21D718084F4A002684A9</string>
-				<string>18DB21D818084F4A002684A9</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>18DB21D718084F4A002684A9</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>FFA99BD2174B4A78A96DD7A5</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME</key>
-				<string>LaunchImage</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Beaconing/Beaconing-Prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Beaconing/Beaconing-Info.plist</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>app</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>18DB21D818084F4A002684A9</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>FFA99BD2174B4A78A96DD7A5</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME</key>
-				<string>LaunchImage</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Beaconing/Beaconing-Prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Beaconing/Beaconing-Info.plist</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>app</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>18DB21D918084F4A002684A9</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>18DB21DA18084F4A002684A9</string>
-				<string>18DB21DB18084F4A002684A9</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>18DB21DA18084F4A002684A9</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ARCHS</key>
-				<string>$(ARCHS_STANDARD_INCLUDING_64_BIT)</string>
-				<key>BUNDLE_LOADER</key>
-				<string>$(BUILT_PRODUCTS_DIR)/Beaconing.app/Beaconing</string>
-				<key>FRAMEWORK_SEARCH_PATHS</key>
-				<array>
-					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
-					<string>$(inherited)</string>
-					<string>$(DEVELOPER_FRAMEWORKS_DIR)</string>
-				</array>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Beaconing/Beaconing-Prefix.pch</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>INFOPLIST_FILE</key>
-				<string>BeaconingTests/BeaconingTests-Info.plist</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_HOST</key>
-				<string>$(BUNDLE_LOADER)</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>xctest</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>18DB21DB18084F4A002684A9</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ARCHS</key>
-				<string>$(ARCHS_STANDARD_INCLUDING_64_BIT)</string>
-				<key>BUNDLE_LOADER</key>
-				<string>$(BUILT_PRODUCTS_DIR)/Beaconing.app/Beaconing</string>
-				<key>FRAMEWORK_SEARCH_PATHS</key>
-				<array>
-					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
-					<string>$(inherited)</string>
-					<string>$(DEVELOPER_FRAMEWORKS_DIR)</string>
-				</array>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Beaconing/Beaconing-Prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>BeaconingTests/BeaconingTests-Info.plist</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_HOST</key>
-				<string>$(BUNDLE_LOADER)</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>xctest</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>2E6A10EF686A4D21B80D5418</key>
-		<dict>
-			<key>fileRef</key>
-			<string>F2EE1A25F13D497A9D9D65BC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5444785431314F02944EE37D</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Pods-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>ADD57107338A425DA00F7C28</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>F2EE1A25F13D497A9D9D65BC</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>FFA99BD2174B4A78A96DD7A5</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Pods.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>18DB219C18084F4A002684A9</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		187056C51809AF1B00E2AA8F /* OWUClientManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 187056BE1809AF1B00E2AA8F /* OWUClientManager.m */; };
+		187056C61809AF1B00E2AA8F /* OWUProximityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 187056C01809AF1B00E2AA8F /* OWUProximityManager.m */; };
+		187056C71809AF1B00E2AA8F /* OWUServerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 187056C21809AF1B00E2AA8F /* OWUServerManager.m */; };
+		18DB21A818084F4A002684A9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18DB21A718084F4A002684A9 /* Foundation.framework */; };
+		18DB21AA18084F4A002684A9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18DB21A918084F4A002684A9 /* CoreGraphics.framework */; };
+		18DB21AC18084F4A002684A9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18DB21AB18084F4A002684A9 /* UIKit.framework */; };
+		18DB21B218084F4A002684A9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 18DB21B018084F4A002684A9 /* InfoPlist.strings */; };
+		18DB21B418084F4A002684A9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DB21B318084F4A002684A9 /* main.m */; };
+		18DB21B818084F4A002684A9 /* OWUAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DB21B718084F4A002684A9 /* OWUAppDelegate.m */; };
+		18DB21BB18084F4A002684A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18DB21B918084F4A002684A9 /* Main.storyboard */; };
+		18DB21BE18084F4A002684A9 /* OWUViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DB21BD18084F4A002684A9 /* OWUViewController.m */; };
+		18DB21C018084F4A002684A9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18DB21BF18084F4A002684A9 /* Images.xcassets */; };
+		18DB21C718084F4A002684A9 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18DB21C618084F4A002684A9 /* XCTest.framework */; };
+		18DB21C818084F4A002684A9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18DB21A718084F4A002684A9 /* Foundation.framework */; };
+		18DB21C918084F4A002684A9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18DB21AB18084F4A002684A9 /* UIKit.framework */; };
+		18DB21D118084F4A002684A9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 18DB21CF18084F4A002684A9 /* InfoPlist.strings */; };
+		18DB21D318084F4A002684A9 /* BeaconingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DB21D218084F4A002684A9 /* BeaconingTests.m */; };
+		2E6A10EF686A4D21B80D5418 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F2EE1A25F13D497A9D9D65BC /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		18DB21CA18084F4A002684A9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18DB219C18084F4A002684A9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 18DB21A318084F4A002684A9;
+			remoteInfo = Beaconing;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		187056BD1809AF1B00E2AA8F /* OWUClientManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWUClientManager.h; sourceTree = "<group>"; };
+		187056BE1809AF1B00E2AA8F /* OWUClientManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWUClientManager.m; sourceTree = "<group>"; };
+		187056BF1809AF1B00E2AA8F /* OWUProximityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWUProximityManager.h; sourceTree = "<group>"; };
+		187056C01809AF1B00E2AA8F /* OWUProximityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWUProximityManager.m; sourceTree = "<group>"; };
+		187056C11809AF1B00E2AA8F /* OWUServerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWUServerManager.h; sourceTree = "<group>"; };
+		187056C21809AF1B00E2AA8F /* OWUServerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWUServerManager.m; sourceTree = "<group>"; };
+		187056C41809AF1B00E2AA8F /* OWUProximityManagerConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWUProximityManagerConstants.h; sourceTree = "<group>"; };
+		18DB21A418084F4A002684A9 /* Beaconing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Beaconing.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		18DB21A718084F4A002684A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		18DB21A918084F4A002684A9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		18DB21AB18084F4A002684A9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		18DB21AF18084F4A002684A9 /* Beaconing-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Beaconing-Info.plist"; sourceTree = "<group>"; };
+		18DB21B118084F4A002684A9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		18DB21B318084F4A002684A9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		18DB21B518084F4A002684A9 /* Beaconing-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Beaconing-Prefix.pch"; sourceTree = "<group>"; };
+		18DB21B618084F4A002684A9 /* OWUAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OWUAppDelegate.h; sourceTree = "<group>"; };
+		18DB21B718084F4A002684A9 /* OWUAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OWUAppDelegate.m; sourceTree = "<group>"; };
+		18DB21BA18084F4A002684A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		18DB21BC18084F4A002684A9 /* OWUViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OWUViewController.h; sourceTree = "<group>"; };
+		18DB21BD18084F4A002684A9 /* OWUViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = OWUViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		18DB21BF18084F4A002684A9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		18DB21C518084F4A002684A9 /* BeaconingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeaconingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		18DB21C618084F4A002684A9 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		18DB21CE18084F4A002684A9 /* BeaconingTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BeaconingTests-Info.plist"; sourceTree = "<group>"; };
+		18DB21D018084F4A002684A9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		18DB21D218084F4A002684A9 /* BeaconingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BeaconingTests.m; sourceTree = "<group>"; };
+		F2EE1A25F13D497A9D9D65BC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFA99BD2174B4A78A96DD7A5 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		18DB21A118084F4A002684A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18DB21AA18084F4A002684A9 /* CoreGraphics.framework in Frameworks */,
+				18DB21AC18084F4A002684A9 /* UIKit.framework in Frameworks */,
+				18DB21A818084F4A002684A9 /* Foundation.framework in Frameworks */,
+				2E6A10EF686A4D21B80D5418 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18DB21C218084F4A002684A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18DB21C718084F4A002684A9 /* XCTest.framework in Frameworks */,
+				18DB21C918084F4A002684A9 /* UIKit.framework in Frameworks */,
+				18DB21C818084F4A002684A9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		187056BC1809AF1B00E2AA8F /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				187056BD1809AF1B00E2AA8F /* OWUClientManager.h */,
+				187056BE1809AF1B00E2AA8F /* OWUClientManager.m */,
+				187056BF1809AF1B00E2AA8F /* OWUProximityManager.h */,
+				187056C01809AF1B00E2AA8F /* OWUProximityManager.m */,
+				187056C11809AF1B00E2AA8F /* OWUServerManager.h */,
+				187056C21809AF1B00E2AA8F /* OWUServerManager.m */,
+			);
+			name = Classes;
+			path = ../../Classes;
+			sourceTree = "<group>";
+		};
+		187056C31809AF1B00E2AA8F /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				187056C41809AF1B00E2AA8F /* OWUProximityManagerConstants.h */,
+			);
+			name = Constants;
+			path = ../../Constants;
+			sourceTree = "<group>";
+		};
+		18BEE13D18092CD100156B71 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				18DB21B618084F4A002684A9 /* OWUAppDelegate.h */,
+				18DB21B718084F4A002684A9 /* OWUAppDelegate.m */,
+				18DB21B918084F4A002684A9 /* Main.storyboard */,
+				18DB21BC18084F4A002684A9 /* OWUViewController.h */,
+				18DB21BD18084F4A002684A9 /* OWUViewController.m */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		18DB219B18084F4A002684A9 = {
+			isa = PBXGroup;
+			children = (
+				18DB21AD18084F4A002684A9 /* Beaconing */,
+				18DB21CC18084F4A002684A9 /* BeaconingTests */,
+				18DB21A618084F4A002684A9 /* Frameworks */,
+				18DB21A518084F4A002684A9 /* Products */,
+				FFA99BD2174B4A78A96DD7A5 /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		18DB21A518084F4A002684A9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				18DB21A418084F4A002684A9 /* Beaconing.app */,
+				18DB21C518084F4A002684A9 /* BeaconingTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		18DB21A618084F4A002684A9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				18DB21A718084F4A002684A9 /* Foundation.framework */,
+				18DB21A918084F4A002684A9 /* CoreGraphics.framework */,
+				18DB21AB18084F4A002684A9 /* UIKit.framework */,
+				18DB21C618084F4A002684A9 /* XCTest.framework */,
+				F2EE1A25F13D497A9D9D65BC /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		18DB21AD18084F4A002684A9 /* Beaconing */ = {
+			isa = PBXGroup;
+			children = (
+				187056BC1809AF1B00E2AA8F /* Classes */,
+				187056C31809AF1B00E2AA8F /* Constants */,
+				18BEE13D18092CD100156B71 /* App */,
+				18DB21BF18084F4A002684A9 /* Images.xcassets */,
+				18DB21AE18084F4A002684A9 /* Supporting Files */,
+			);
+			path = Beaconing;
+			sourceTree = "<group>";
+		};
+		18DB21AE18084F4A002684A9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				18DB21AF18084F4A002684A9 /* Beaconing-Info.plist */,
+				18DB21B018084F4A002684A9 /* InfoPlist.strings */,
+				18DB21B318084F4A002684A9 /* main.m */,
+				18DB21B518084F4A002684A9 /* Beaconing-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		18DB21CC18084F4A002684A9 /* BeaconingTests */ = {
+			isa = PBXGroup;
+			children = (
+				18DB21D218084F4A002684A9 /* BeaconingTests.m */,
+				18DB21CD18084F4A002684A9 /* Supporting Files */,
+			);
+			path = BeaconingTests;
+			sourceTree = "<group>";
+		};
+		18DB21CD18084F4A002684A9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				18DB21CE18084F4A002684A9 /* BeaconingTests-Info.plist */,
+				18DB21CF18084F4A002684A9 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		18DB21A318084F4A002684A9 /* Beaconing */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18DB21D618084F4A002684A9 /* Build configuration list for PBXNativeTarget "Beaconing" */;
+			buildPhases = (
+				ADD57107338A425DA00F7C28 /* Check Pods Manifest.lock */,
+				18DB21A018084F4A002684A9 /* Sources */,
+				18DB21A118084F4A002684A9 /* Frameworks */,
+				18DB21A218084F4A002684A9 /* Resources */,
+				5444785431314F02944EE37D /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Beaconing;
+			productName = Beaconing;
+			productReference = 18DB21A418084F4A002684A9 /* Beaconing.app */;
+			productType = "com.apple.product-type.application";
+		};
+		18DB21C418084F4A002684A9 /* BeaconingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18DB21D918084F4A002684A9 /* Build configuration list for PBXNativeTarget "BeaconingTests" */;
+			buildPhases = (
+				18DB21C118084F4A002684A9 /* Sources */,
+				18DB21C218084F4A002684A9 /* Frameworks */,
+				18DB21C318084F4A002684A9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				18DB21CB18084F4A002684A9 /* PBXTargetDependency */,
+			);
+			name = BeaconingTests;
+			productName = BeaconingTests;
+			productReference = 18DB21C518084F4A002684A9 /* BeaconingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		18DB219C18084F4A002684A9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = OWU;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "ohwutup software";
+				TargetAttributes = {
+					18DB21C418084F4A002684A9 = {
+						TestTargetID = 18DB21A318084F4A002684A9;
+					};
+				};
+			};
+			buildConfigurationList = 18DB219F18084F4A002684A9 /* Build configuration list for PBXProject "Beaconing" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 18DB219B18084F4A002684A9;
+			productRefGroup = 18DB21A518084F4A002684A9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				18DB21A318084F4A002684A9 /* Beaconing */,
+				18DB21C418084F4A002684A9 /* BeaconingTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		18DB21A218084F4A002684A9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18DB21C018084F4A002684A9 /* Images.xcassets in Resources */,
+				18DB21B218084F4A002684A9 /* InfoPlist.strings in Resources */,
+				18DB21BB18084F4A002684A9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18DB21C318084F4A002684A9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18DB21D118084F4A002684A9 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5444785431314F02944EE37D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ADD57107338A425DA00F7C28 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		18DB21A018084F4A002684A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18DB21B818084F4A002684A9 /* OWUAppDelegate.m in Sources */,
+				187056C61809AF1B00E2AA8F /* OWUProximityManager.m in Sources */,
+				187056C71809AF1B00E2AA8F /* OWUServerManager.m in Sources */,
+				18DB21BE18084F4A002684A9 /* OWUViewController.m in Sources */,
+				187056C51809AF1B00E2AA8F /* OWUClientManager.m in Sources */,
+				18DB21B418084F4A002684A9 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18DB21C118084F4A002684A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18DB21D318084F4A002684A9 /* BeaconingTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		18DB21CB18084F4A002684A9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 18DB21A318084F4A002684A9 /* Beaconing */;
+			targetProxy = 18DB21CA18084F4A002684A9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		18DB21B018084F4A002684A9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18DB21B118084F4A002684A9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		18DB21B918084F4A002684A9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18DB21BA18084F4A002684A9 /* Base */,
+			);
+			name = Main.storyboard;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		18DB21CF18084F4A002684A9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18DB21D018084F4A002684A9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		18DB21D418084F4A002684A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		18DB21D518084F4A002684A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		18DB21D718084F4A002684A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FFA99BD2174B4A78A96DD7A5 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Beaconing/Beaconing-Prefix.pch";
+				INFOPLIST_FILE = "Beaconing/Beaconing-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		18DB21D818084F4A002684A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FFA99BD2174B4A78A96DD7A5 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Beaconing/Beaconing-Prefix.pch";
+				INFOPLIST_FILE = "Beaconing/Beaconing-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		18DB21DA18084F4A002684A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Beaconing.app/Beaconing";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Beaconing/Beaconing-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "BeaconingTests/BeaconingTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		18DB21DB18084F4A002684A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Beaconing.app/Beaconing";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Beaconing/Beaconing-Prefix.pch";
+				INFOPLIST_FILE = "BeaconingTests/BeaconingTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		18DB219F18084F4A002684A9 /* Build configuration list for PBXProject "Beaconing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18DB21D418084F4A002684A9 /* Debug */,
+				18DB21D518084F4A002684A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18DB21D618084F4A002684A9 /* Build configuration list for PBXNativeTarget "Beaconing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18DB21D718084F4A002684A9 /* Debug */,
+				18DB21D818084F4A002684A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18DB21D918084F4A002684A9 /* Build configuration list for PBXNativeTarget "BeaconingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18DB21DA18084F4A002684A9 /* Debug */,
+				18DB21DB18084F4A002684A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 18DB219C18084F4A002684A9 /* Project object */;
+}
