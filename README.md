@@ -4,10 +4,14 @@ A simple interface to abstract away the `CLLocationManagerDelegate`, `CBPeripher
 
 ## Sample Project
 
+To simulate entering a defined region, select Client on one device, **then** select Server on the other. As the devices will likely be next to eachother when the exchange takes place, it's likely that the Client device will fire off `proximityClient:DidEnterBeaconRegion` followed by `proximityClient:DidRangeBeacon:` and finally `proximityClient:DidConnectToServer` which will then call `proximityServerDidConnectToClient` on the Server device.
+
+By default, the connection between the Client and Server will happen at `CLProximityNear` so it is possible if your devices are on opposite sides of the desk that you will need to move them closer. Pay attention to the console to see the distance at which the Client is currently ranging.
+
 A few small caveats:
 - Two iOS 7 devices are required
-- `locationManager:DidEnterRegion:` and therefor `proximityManager:DidEnterBeaconRegion` will not be called if the Client starts while already in range of the Server
-- `locationManager:DidExitRegion:` and the resulting `proximityManager:DidExitBeaconRegion` will not be called until about a minute after exiting the region ([dev forum link](https://devforums.apple.com/message/898335#898335))
+- `locationManager:DidEnterRegion:` and therefor `proximityClient:DidEnterBeaconRegion` will not be called if the Client starts while already in range of the Server
+- `locationManager:DidExitRegion:` and the resulting `proximityClient:DidExitBeaconRegion` will not be called until about a minute after exiting the region ([dev forum link](https://devforums.apple.com/message/898335#898335))
 
 ## Usage
 
