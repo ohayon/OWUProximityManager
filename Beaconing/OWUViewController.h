@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "OWUBlueBeaconServiceManager.h"
+#import "OWUProximityController.h"
 
-@interface OWUViewController : UIViewController <OWUBlueBeaconServerDelegate, OWUProximityControllerClientDelegate>
+@interface OWUViewController : UIViewController <OWUProximityServerDelegate, OWUProximityClientDelegate>
 
 @end

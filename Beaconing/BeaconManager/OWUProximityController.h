@@ -7,12 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "OWUClientManager.h"
-#import "OWUServerManager.h"
+#import "OWUClientController.h"
+#import "OWUServerController.h"
 #import <CoreBluetooth/CoreBluetooth.h>
 #import <CoreLocation/CoreLocation.h>
 
-@protocol OWUProximityControllerClientDelegate <NSObject>
+@protocol OWUProximityClientDelegate <NSObject>
 
 - (void)proximityClientDidEnterRegion;
 - (void)proximityClientDidConnectToServer;
@@ -21,14 +21,14 @@
 
 @end
 
-@protocol OWUBlueBeaconServerDelegate <NSObject>
+@protocol OWUProximityServerDelegate <NSObject>
 
 - (void)proximityServerDidConnectToClient;
 - (void)proximityServerDidReceiveNewDictionary:(NSDictionary*)dictionary;
 
 @end
 
-@interface OWUBlueBeaconServiceManager : NSObject <OWUClientManagerDelegate, OWUServerManagerDelegate>
+@interface OWUProximityController : NSObject <OWUClientControllerDelegate, OWUServerControllerDelegate>
 
 + (instancetype)shared;
 @property (nonatomic) id delegate;

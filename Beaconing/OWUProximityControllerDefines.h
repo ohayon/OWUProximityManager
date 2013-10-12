@@ -1,5 +1,5 @@
 //
-//  NSObject_OWUBBSeriviceManagerDefines.h
+//  OWUProximityControllerDefines.h
 //  Beaconing
 //
 //  Created by David Ohayon on 10/11/13.

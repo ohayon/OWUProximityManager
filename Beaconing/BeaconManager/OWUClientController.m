@@ -6,10 +6,10 @@
 //  Copyright (c) 2013 ohwutup software. All rights reserved.
 //
 
-#import "OWUClientManager.h"
-#import "OWUBBSeriviceManagerDefines.h"
+#import "OWUClientController.h"
+#import "OWUProximityControllerDefines.h"
 
-@interface OWUClientManager () {
+@interface OWUClientController () {
     UIBackgroundTaskIdentifier _backgroundTaskIdentifier;
     CBUUID *_serviceUUID;
     CBMutableService *_service;
@@ -24,19 +24,19 @@
 
 @end
 
-@implementation OWUClientManager
+@implementation OWUClientController
 
-+ (instancetype)sharedClientManager {
-    static OWUClientManager *_sharedInstance = nil;
++ (instancetype)shared {
+    static OWUClientController *_sharedInstance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _sharedInstance = [[OWUClientManager alloc] init];
+        _sharedInstance = [[OWUClientController alloc] init];
     });
     
     return _sharedInstance;
 }
 
-- (void)startupClientManager {
+- (void)startupClient {
     _locationManager = [[CLLocationManager alloc] init];
     _locationManager.delegate = self;
     _locationManager.desiredAccuracy = kCLLocationAccuracyBest;
@@ -45,7 +45,7 @@
     [_locationManager startMonitoringForRegion:_beaconRegion];
 }
 
-- (void)teardownClientManager {
+- (void)teardownClient {
     _locationManager = nil;
     _beaconRegion = nil;
     _peripheralManager = nil;
@@ -82,7 +82,7 @@
 - (void)peripheralManager:(CBPeripheralManager *)peripheral didAddService:(CBService *)service error:(NSError *)error {
     if (error == nil) {
         [_peripheralManager startAdvertising:@{
-                                               CBAdvertisementDataLocalNameKey : @"OWUClientManager",
+                                               CBAdvertisementDataLocalNameKey : @"OWUClientController",
                                                CBAdvertisementDataServiceUUIDsKey : @[_serviceUUID]
                                                }];
     }

@@ -10,7 +10,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import <CoreBluetooth/CoreBluetooth.h>
 
-@protocol OWUClientManagerDelegate <NSObject>
+@protocol OWUClientControllerDelegate <NSObject>
 
 - (void)clientManagerIsPublishingToCentral;
 - (void)clientManagerDidEnterBeaconRegion;
@@ -21,14 +21,14 @@
 @end
 
 
-@interface OWUClientManager : NSObject <CLLocationManagerDelegate, CBPeripheralManagerDelegate, CBPeripheralDelegate>
+@interface OWUClientController : NSObject <CLLocationManagerDelegate, CBPeripheralManagerDelegate, CBPeripheralDelegate>
 
 @property (nonatomic, strong) id delegate;
 @property (nonatomic) CLProximity proximityToConnectToServer;
 
-+ (instancetype)sharedClientManager;
-- (void)startupClientManager;
-- (void)teardownClientManager;
++ (instancetype)shared;
+- (void)startupClient;
+- (void)teardownClient;
 - (void)updateCharactaristicValueWithDictionary:(NSDictionary*)JSONDictionary;
 
 @end

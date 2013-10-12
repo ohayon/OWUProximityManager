@@ -6,41 +6,41 @@
 //  Copyright (c) 2013 ohwutup software. All rights reserved.
 //
 
-#import "OWUBlueBeaconServiceManager.h"
+#import "OWUProximityController.h"
 
-@implementation OWUBlueBeaconServiceManager
+@implementation OWUProximityController
 
 + (instancetype)shared {
-    static OWUBlueBeaconServiceManager *_sharedInstance = nil;
+    static OWUProximityController *_sharedInstance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _sharedInstance = [[OWUBlueBeaconServiceManager alloc] init];
+        _sharedInstance = [[OWUProximityController alloc] init];
     });
     
     return _sharedInstance;
 }
 
 - (void)teardownService {
-    [[OWUClientManager sharedClientManager] teardownClientManager];
-    [[OWUServerManager sharedServerManager] teardownServerManager];
+    [[OWUClientController shared] teardownClient];
+    [[OWUServerController shared] teardownServer];
 }
 
 #pragma mark - OWUClient
 
 - (void)startupClient {
-    [[OWUClientManager sharedClientManager] startupClientManager];
-    [OWUClientManager sharedClientManager].delegate = self;
+    [[OWUClientController shared] startupClient];
+    [OWUClientController shared].delegate = self;
 }
 
 - (void)postToServerWithDictionary:(NSDictionary*)dictionary {
-    [[OWUClientManager sharedClientManager] updateCharactaristicValueWithDictionary:dictionary];
+    [[OWUClientController shared] updateCharactaristicValueWithDictionary:dictionary];
 }
 
 #pragma mark - OWUServer
 
 - (void)startupServer {
-    [[OWUServerManager sharedServerManager] startupServerManager];
-    [OWUServerManager sharedServerManager].delegate = self;
+    [[OWUServerController shared] startupServer];
+    [OWUServerController shared].delegate = self;
 }
 
 #pragma mark - OWUClientManagerDelegate

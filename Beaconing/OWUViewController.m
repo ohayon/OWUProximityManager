@@ -58,9 +58,9 @@
 - (IBAction)clientSwitchSwitched:(id)sender {
     UISwitch *theSwitch = (UISwitch*)sender;
     if (theSwitch.isOn) {
-        [[OWUBlueBeaconServiceManager shared] startupClient];
-        [OWUBlueBeaconServiceManager shared].proximityToConnectToServer = CLProximityNear;
-        [OWUBlueBeaconServiceManager shared].delegate = self;
+        [[OWUProximityController shared] startupClient];
+        [OWUProximityController shared].proximityToConnectToServer = CLProximityNear;
+        [OWUProximityController shared].delegate = self;
         [self setupUIForClient];
     } else {
         [self killService];
@@ -70,8 +70,8 @@
 - (IBAction)serverSwitchSwitched:(id)sender {
     UISwitch *theSwitch = (UISwitch*)sender;
     if (theSwitch.isOn) {
-        [[OWUBlueBeaconServiceManager shared] startupServer];
-        [OWUBlueBeaconServiceManager shared].delegate = self;
+        [[OWUProximityController shared] startupServer];
+        [OWUProximityController shared].delegate = self;
         [self setupUIForServer];
     } else {
         [self killService];
@@ -79,7 +79,7 @@
 }
 
 - (void)killService {
-    [[OWUBlueBeaconServiceManager shared] teardownService];
+    [[OWUProximityController shared] teardownService];
     self.textField.hidden = YES;
     self.updateButton.hidden = YES;
     self.currentValueLabel.hidden = YES;
@@ -94,7 +94,7 @@
 }
 
 - (IBAction)updateButtonTapped:(id)sender {
-    [[OWUBlueBeaconServiceManager shared] postToServerWithDictionary:@{@"key": self.textField.text}];
+    [[OWUProximityController shared] postToServerWithDictionary:@{@"key": self.textField.text}];
     [self.textField resignFirstResponder];
 }
 

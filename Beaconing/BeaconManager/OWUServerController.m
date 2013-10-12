@@ -6,10 +6,10 @@
 //  Copyright (c) 2013 ohwutup software. All rights reserved.
 //
 
-#import "OWUServerManager.h"
-#import "OWUBBSeriviceManagerDefines.h"
+#import "OWUServerController.h"
+#import "OWUProximityControllerDefines.h"
 
-@interface OWUServerManager () {
+@interface OWUServerController () {
     // iBeacons
     CBPeripheralManager *_peripheralManager;
     CLBeaconRegion *_beaconRegion;
@@ -24,26 +24,26 @@
 
 @end
 
-@implementation OWUServerManager
+@implementation OWUServerController
 
-+ (instancetype) sharedServerManager {
-    static OWUServerManager *_sharedInstance = nil;
++ (instancetype) shared {
+    static OWUServerController *_sharedInstance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _sharedInstance = [[OWUServerManager alloc] init];
+        _sharedInstance = [[OWUServerController alloc] init];
     });
     
     return _sharedInstance;
 }
 
-- (void) startupServerManager {
+- (void) startupServer {
     _peripheralManager = [[CBPeripheralManager alloc] initWithDelegate:self queue:nil];
     _centralManager = [[CBCentralManager alloc] initWithDelegate:self queue:nil];
     _serviceUUID = [CBUUID UUIDWithString:kOWUBluetoothServiceUUID];
     _characteristicUUID = [CBUUID UUIDWithString:kOWUBluetoothCharacteristicUUID];
 }
 
-- (void) teardownServerManager {
+- (void) teardownServer {
     _peripheralManager = nil;
     _centralManager = nil;
     _peripheral = nil;
