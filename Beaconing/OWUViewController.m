@@ -76,6 +76,8 @@
 #pragma mark - OWUBlueBeaconClientDelegate
 
 - (void)blueBeaconClientDidEnterRegion {
+    // This will not be called if the app is started while already inside of the region
+    
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Entered Region" message:nil delegate:self cancelButtonTitle:@"Okay" otherButtonTitles:nil, nil];
     [alert show];
 }
@@ -88,6 +90,14 @@
 - (void)blueBeaconClientDidRangeBeacon:(CLBeacon *)beacon {
 //    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Ranged Beacon" message:nil delegate:self cancelButtonTitle:@"Okay" otherButtonTitles:nil, nil];
 //    [alert show];
+}
+
+- (void)blueBeaconClientDidExitRegion {
+    // This will not get called until about a minute after exiting the region
+    // https://devforums.apple.com/message/898335#898335
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Exited Region" message:nil delegate:self cancelButtonTitle:@"Okay" otherButtonTitles:nil, nil];
+    [alert show];
 }
 
 #pragma mark - OWUBlueBeaconServerDelegate
