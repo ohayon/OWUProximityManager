@@ -2,6 +2,8 @@
 
 A simple interface to abstract away the `CLLocationManagerDelegate`, `CBPeripheralManagerDelegate`, `CBCentralManagerDelegate` and `CBPeripheralDelegate` spaghetti.
 
+Suggestions, issues and pull requests are more than welcome.
+
 ## Sample Project
 
 To simulate entering a defined region, select Client on one device, **then** select Server on the other. As the devices will likely be next to eachother when the exchange takes place, it's likely that the Client device will fire off `proximityClientDidEnterBeaconRegion` followed by `proximityClientDidRangeBeacon:` and finally `proximityClientDidConnectToServer` which will then call `proximityServerDidConnectToClient` on the Server device.
@@ -27,9 +29,7 @@ You can use the `desiredProximity` property on the class with a `CLProximity` va
 - More fine tuning of BeaconRegion measured power
 - Handle invalidated services in `OWUProximityServer`
 - Properly handle return from local notification
-
-## Thoughts For Future
-- Maybe a bluetooth REST API?
+- And moar.
 
 ## License
 OWUProximityManager is available under the MIT license. See the LICENSE.txt file for more info.
