@@ -32,4 +32,4 @@ You can use the `desiredProximity` property on the class with a `CLProximity` va
 - And moar.
 
 ## License
-OWUProximityManager is available under the MIT license. See the LICENSE.txt file for more info.
+OWUProximityManager is available under the MIT license. See the LICENSE file for more info.
