@@ -21,7 +21,7 @@ A few small caveats:
 
 First, create three UUID's using something like `uuidgen` for `OWUProximityManagerConstants.h`
 
-Then, `#import OWUProximityManager.h`
+Then, `#import "OWUProximityManager.h"`
 
 OWUProximityManager can be configured as a Client or Server. To get things started as either, just call `[[OWUProximityManager shared] startupClientWithDelegate:delegate]` or `[[OWUProximityManager shared] startupServerWithDelegate:delegate]` and implement either or both of `OWUProximityClientDelegate` and `OWUProximityServerDelegate` to be notified of proximity events.
 
