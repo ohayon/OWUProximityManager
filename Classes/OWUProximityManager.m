@@ -7,6 +7,12 @@
 //
 
 #import "OWUProximityManager.h"
+#import "OWUClientManager.h"
+#import "OWUServerManager.h"
+
+@interface OWUProximityManager (Delegates) <OWUProximityClientDelegate, OWUProximityServerDelegate>
+
+@end
 
 @implementation OWUProximityManager
 

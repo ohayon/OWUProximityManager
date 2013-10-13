@@ -7,8 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "OWUClientManager.h"
-#import "OWUServerManager.h"
 #import <CoreBluetooth/CoreBluetooth.h>
 #import <CoreLocation/CoreLocation.h>
 
@@ -28,7 +26,7 @@
 
 @end
 
-@interface OWUProximityManager : NSObject <OWUClientManagerDelegate, OWUServerManagerDelegate>
+@interface OWUProximityManager : NSObject
 
 + (instancetype)shared;
 @property (nonatomic) id delegate;
