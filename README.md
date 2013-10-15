@@ -9,13 +9,13 @@ To simulate entering a defined region, select Client on one device, **then** sel
 ![home](Screenshots/home.png) ![server](Screenshots/server.png) ![client](Screenshots/client.png)
 
 ## Usage
-Just, create a few UUIDs for `OWUProximityManagerConstants.h`, `#import OWUProximityManager.h`
+Just, create a few UUIDs for `OWUProximityManagerConstants.h` and then
 
-Setup Sever:
+Setup the Sever:
 ``` objective-c
 [[OWUProximityManager shared] startupServerWithDelegate:delegate]
 ```
-Setup Client:
+Setup the Client:
 ``` objective-c
 [[OWUProximityManager shared] startupClientWithDelegate:delegate]
 // defaults to CLProximityNear
