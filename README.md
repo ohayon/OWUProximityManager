@@ -18,7 +18,7 @@ Server Setup:
 Client Setup:
 ``` objective-c
 [[OWUProximityManager shared] startupClientWithDelegate:delegate]
-[OWUProximityManager shared].desiredProximity = CLProximityImmediate \\ defaults to CLProximityNear
+[OWUProximityManager shared].desiredProximity = CLProximityImmediate // defaults to CLProximityNear
 ```
 Two things:
 - `locationManager:DidEnterRegion:` and therefor `proximityClientDidEnterBeaconRegion` will not be called if the Client starts while already in range of the Server
