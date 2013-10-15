@@ -11,7 +11,12 @@ To simulate entering a defined region, select Client on one device, **then** sel
 ## Usage
 Just, create a few UUIDs for `OWUProximityManagerConstants.h`, `#import OWUProximityManager.h` and call `[[OWUProximityManager shared] startupClientWithDelegate:delegate]` or `[[OWUProximityManager shared] startupServerWithDelegate:delegate]` 
 
-Connection between devices defaults to `CLProximityNear` but can by changed with the `desiredProximity` property.
+Server Setup:
+`[[OWUProximityManager shared] startupServerWithDelegate:delegate]`
+
+Client Setup:
+`[[OWUProximityManager shared] startupClientWithDelegate:delegate]
+[OWUProximityManager shared].desiredProximity = CLProximityImmediate \\ defaults to CLProximityNear`
 
 Two things:
 - `locationManager:DidEnterRegion:` and therefor `proximityClientDidEnterBeaconRegion` will not be called if the Client starts while already in range of the Server
