@@ -9,16 +9,17 @@ To simulate entering a defined region, select Client on one device, **then** sel
 ![home](Screenshots/home.png) ![server](Screenshots/server.png) ![client](Screenshots/client.png)
 
 ## Usage
-Just, create a few UUIDs for `OWUProximityManagerConstants.h`, `#import OWUProximityManager.h` and call `[[OWUProximityManager shared] startupClientWithDelegate:delegate]` or `[[OWUProximityManager shared] startupServerWithDelegate:delegate]` 
+Just, create a few UUIDs for `OWUProximityManagerConstants.h`, `#import OWUProximityManager.h`
 
-Server Setup:
+Setup Sever:
 ``` objective-c
 [[OWUProximityManager shared] startupServerWithDelegate:delegate]
 ```
-Client Setup:
+Setup Client:
 ``` objective-c
 [[OWUProximityManager shared] startupClientWithDelegate:delegate]
-[OWUProximityManager shared].desiredProximity = CLProximityImmediate // defaults to CLProximityNear
+// defaults to CLProximityNear
+[OWUProximityManager shared].desiredProximity = CLProximityImmediate
 ```
 Two things:
 - `locationManager:DidEnterRegion:` and therefor `proximityClientDidEnterBeaconRegion` will not be called if the Client starts while already in range of the Server
