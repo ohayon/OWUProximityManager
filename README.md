@@ -4,7 +4,7 @@ Detect and connect to nearby devices with iBeacons and CoreBluetooth.
 
 ## Sample Project
 
-To simulate entering a defined region, select Client on one device, **then** select Server on the other. As the devices will likely be next to eachother when the exchange takes place, it's likely that the Client device will enter the region, range the server and establish a connection pretty quickly.
+To simulate functionality, select Client on one device, **then** select Server on the other. As the proximity of the test devices is likely pretty close, expect delegate methods to fire quickly.
 
 ![home](Screenshots/home.png) ![server](Screenshots/server.png) ![client](Screenshots/client.png)
 
