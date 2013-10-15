@@ -2,6 +2,12 @@
 
 Detect and connect to nearby devices with iBeacons and CoreBluetooth.
 
+## Sample Project
+
+To simulate functionality, select Client on one device, **then** select Server on the other. As the proximity of the test devices is likely pretty close, expect delegate methods to fire quickly.
+
+![home](Screenshots/home.png) ![server](Screenshots/server.png) ![client](Screenshots/client.png)
+
 ## Usage
 Just, create a few UUIDs for `OWUProximityManagerConstants.h` and then
 
@@ -18,12 +24,6 @@ Setup the Client:
 Two things:
 - `proximityClientDidEnterRegion` will not be called if the Client starts while already in range of the Server
 - `proximityClientDidExitRegion` will not be called until about a minute after exiting the region ([dev forum link](https://devforums.apple.com/message/898335#898335))
-
-## Sample Project
-
-To simulate functionality, select Client on one device, **then** select Server on the other. As the proximity of the test devices is likely pretty close, expect delegate methods to fire quickly.
-
-![home](Screenshots/home.png) ![server](Screenshots/server.png) ![client](Screenshots/client.png)
 
 ## ToDo's
 - More fine tuning of BeaconRegion measured power
