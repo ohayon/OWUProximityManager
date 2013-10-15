@@ -22,8 +22,8 @@ Setup the Client:
 [OWUProximityManager shared].desiredProximity = CLProximityImmediate
 ```
 Two things:
-- `proximityClientDidEnterBeaconRegion` will not be called if the Client starts while already in range of the Server
-- `proximityClientDidExitBeaconRegion` will not be called until about a minute after exiting the region ([dev forum link](https://devforums.apple.com/message/898335#898335))
+- `proximityClientDidEnterRegion` will not be called if the Client starts while already in range of the Server
+- `proximityClientDidExitRegion` will not be called until about a minute after exiting the region ([dev forum link](https://devforums.apple.com/message/898335#898335))
 
 ## ToDo's
 - More fine tuning of BeaconRegion measured power
