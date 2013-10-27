@@ -32,5 +32,13 @@ Two things:
 - And moar.
 - Suggestions, issues and pull requests are more than welcome.
 
+## Contact
+
+David Ohayon
+
+- [twitter.com/ohayon](http://twitter.com/ohayon)
+- ohayon.1@gmail.com
+- [ohwutup.com](http://ohwutup.com)
+
 ## License
 OWUProximityManager is available under the MIT license. See the LICENSE file for more info.
