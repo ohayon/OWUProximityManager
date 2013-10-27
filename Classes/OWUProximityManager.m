@@ -36,6 +36,7 @@
 - (void)startupClientWithDelegate:(id)delegate {
     self.delegate = delegate;
     [[OWUClientManager shared] startupClient];
+    [OWUClientManager shared].desiredProximity = self.desiredProximity;
     [OWUClientManager shared].delegate = self;
 }
 
@@ -65,9 +66,29 @@
     [self.delegate proximityClientDidExitRegion];
 }
 
-- (void)clientManagerDidRangeBeacon:(CLBeacon*)beacon {
-    if (beacon.proximity == CLProximityNear || beacon.proximity == self.desiredProximity) {
-        [self.delegate proximityClientDidRangeBeacon:beacon];
+- (void)clientManagerDidRangeBeacon:(CLBeacon*)beacon inRegion:(CLBeaconRegion*)region {
+    [self.delegate proximityClientDidRangeBeacon:beacon];
+    switch (beacon.proximity) {
+        case CLProximityFar:
+            if (self.desiredProximity == CLProximityFar) {
+                [[OWUClientManager shared] startupConnectionToServerInRegion:region];
+            }
+            break;
+        case CLProximityNear:
+            if (self.desiredProximity == CLProximityNear || !self.desiredProximity) {
+                [[OWUClientManager shared] startupConnectionToServerInRegion:region];
+            }
+            break;
+        case CLProximityImmediate:
+            if (self.desiredProximity == CLProximityImmediate) {
+                [[OWUClientManager shared] startupConnectionToServerInRegion:region];
+            }
+            break;
+        case CLProximityUnknown:
+            
+            break;
+        default:
+            break;
     }
 }
 

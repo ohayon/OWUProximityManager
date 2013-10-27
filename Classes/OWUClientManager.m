@@ -154,37 +154,30 @@
         CLBeacon *beacon = beacons[0];
         switch (beacon.proximity) {
             case CLProximityFar:
-                if (self.desiredProximity == CLProximityFar) {
-                    [_locationManager stopRangingBeaconsInRegion:region];
-                    [self startupPeripheralService];
-                }
-                [self.delegate clientManagerDidRangeBeacon:beacon];
+                [self.delegate clientManagerDidRangeBeacon:beacon inRegion:region];
                 NSLog(@"Far");
                 break;
             case CLProximityNear:
-                if (self.desiredProximity == CLProximityNear  || !self.desiredProximity) {
-                    [_locationManager stopRangingBeaconsInRegion:region];
-                    [self startupPeripheralService];
-                }
-                [self.delegate clientManagerDidRangeBeacon:beacon];
+                [self.delegate clientManagerDidRangeBeacon:beacon inRegion:region];
                 NSLog(@"Near");
                 break;
             case CLProximityImmediate:
-                if (self.desiredProximity == CLProximityImmediate) {
-                    [_locationManager stopRangingBeaconsInRegion:region];                    
-                    [self startupPeripheralService];
-                }
-                [self.delegate clientManagerDidRangeBeacon:beacon];
+                [self.delegate clientManagerDidRangeBeacon:beacon inRegion:region];
                 NSLog(@"Immediate");
                 break;
             case CLProximityUnknown:
-                [self.delegate clientManagerDidRangeBeacon:beacon];
+                [self.delegate clientManagerDidRangeBeacon:beacon inRegion:region];
                 NSLog(@"Unknown");
                 break;
             default:
                 break;
         }
     }
+}
+
+- (void) startupConnectionToServerInRegion:(CLBeaconRegion*)region {
+    [_locationManager stopRangingBeaconsInRegion:region];
+    [self startupPeripheralService];
 }
 
 - (void)locationManager:(CLLocationManager *)manager rangingBeaconsDidFailForRegion:(CLBeaconRegion *)region withError:(NSError *)error {
