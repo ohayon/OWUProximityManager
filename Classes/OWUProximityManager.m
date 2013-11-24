@@ -36,7 +36,6 @@
 - (void)startupClientWithDelegate:(id)delegate {
     self.delegate = delegate;
     [[OWUClientManager shared] startupClient];
-    [OWUClientManager shared].desiredProximity = self.desiredProximity;
     [OWUClientManager shared].delegate = self;
 }
 
